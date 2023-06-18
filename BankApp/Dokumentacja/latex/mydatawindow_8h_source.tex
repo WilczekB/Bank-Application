@@ -1,0 +1,49 @@
+\doxysection{mydatawindow.\+h}
+\hypertarget{mydatawindow_8h_source}{}\label{mydatawindow_8h_source}\mbox{\hyperlink{mydatawindow_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MYDATAWINDOW\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MYDATAWINDOW\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QDialog>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{client_8h}{client.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{clientmanager_8h}{clientmanager.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QMessageBox>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_my_data_window}{MyDataWindow}};}
+\DoxyCodeLine{00011\ \}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_my_data_window}{MyDataWindow}}\ :\ \textcolor{keyword}{public}\ QDialog}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//Konstruktor}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//@param\ parent\ wskaźnik\ do\ obiektu\ bazowego}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//@param\ client\ wskaźnik\ do\ obiektu\ klasy\ Client}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//@param\ clientManager\ wskaźnik\ do\ obiektu\ klasy\ clientManager}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_my_data_window}{MyDataWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr},\ \mbox{\hyperlink{class_client}{Client}}*\ client\ =\ \textcolor{keyword}{nullptr},\ \mbox{\hyperlink{class_client_manager}{ClientManager}}\ *clientManager\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//Destruktor}}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_my_data_window_ae0c05dd56c85b11dc25fa5c12bfd1a5c}{\string~MyDataWindow}}();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//Slot\ realizujący\ zaktualizowanie\ danych\ osobowych\ użytkownika}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_changeButton\_clicked();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//Slot\ realizujący\ zamknięcie\ interfejsu\ MyDataWindow}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_exitButton\_clicked();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//Funkcja\ ustawiająca\ w\ polach\ tekstowych\ dane\ osobowe\ użytkownika}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ setMyData();}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ reprezentujący\ interfejs\ użytkownika\ UI}}
+\DoxyCodeLine{00037\ \ \ \ \ Ui::MyDataWindow\ *ui;}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ klasy\ Client}}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{class_client}{Client}}*\ client\_;}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ klasy\ ClientManager}}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_client_manager}{ClientManager}}*\ clientManager\_;}
+\DoxyCodeLine{00042\ \};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MYDATAWINDOW\_H}}
+
+\end{DoxyCode}

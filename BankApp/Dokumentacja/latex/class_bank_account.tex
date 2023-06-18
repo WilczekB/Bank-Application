@@ -1,0 +1,273 @@
+\doxysection{Bank\+Account Class Reference}
+\hypertarget{class_bank_account}{}\label{class_bank_account}\index{BankAccount@{BankAccount}}
+
+
+{\ttfamily \#include $<$bankaccount.\+h$>$}
+
+Inheritance diagram for Bank\+Account\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_bank_account}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bank_account_aea76f19fafd3cdbd6f15bf9d5b141412}{Bank\+Account}} (std\+::string account\+\_\+number, double balance, bool is\+Active, std\+::string owner\+Pesel, std\+::string type)
+\item 
+virtual \mbox{\hyperlink{class_bank_account_af8ff84fe814689a9a6e74c5ae36761d8}{\texorpdfstring{$\sim$}{\string~}\+Bank\+Account}} ()
+\item 
+void \mbox{\hyperlink{class_bank_account_ae9bffacb31429799552b9aadd9c02544}{set\+Is\+Active}} (bool is\+Acitve)
+\item 
+void \mbox{\hyperlink{class_bank_account_a691745d227fdc391c1edfc72906d3a0b}{set\+Balance}} (double balance)
+\item 
+void \mbox{\hyperlink{class_bank_account_a5717f4186e38af1a7677b49683d1616d}{set\+Calculator}} (\mbox{\hyperlink{class_calculator}{Calculator}} \texorpdfstring{$\ast$}{*}calculator)
+\item 
+void \mbox{\hyperlink{class_bank_account_aa69292f134492a301e20d3d9dee294a7}{set\+Account\+Number}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_bank_account_a3af00dc7b6a2e56d4f64984c780a7ae0}{get\+Account\+Number}} () const
+\item 
+bool \mbox{\hyperlink{class_bank_account_a383c1a29063284e78ab6584845fdc03d}{get\+Is\+Active}} () const
+\item 
+double \mbox{\hyperlink{class_bank_account_aeb202a68eff290686b9926ad386293be}{get\+Balance}} () const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_transaction}{Transaction}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_bank_account_aa460e1f94e53945a79a33e7f6771e9d5}{get\+Transactions}} () const
+\item 
+\mbox{\hyperlink{class_client}{Client}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_bank_account_a4df5528233f4f67be96d4e6bfbc715b4}{get\+Owner}} () const
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_bank_account_ad81b7f18aa5cbc3733821eb8a47c33ea}{get\+Transactions\+Id}} () const
+\item 
+std\+::string \mbox{\hyperlink{class_bank_account_a3336abb2fb385cb827c6bf0e9c71413c}{get\+Owner\+ID}} () const
+\item 
+\mbox{\hyperlink{class_calculator}{Calculator}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_bank_account_a80611fa0eddca23c0ea7cd2945daaede}{get\+Calculator}} () const
+\item 
+QString \mbox{\hyperlink{class_bank_account_ab723d7b42cd8346f5827edb26656823a}{show\+Transactions}} () const
+\item 
+virtual void \mbox{\hyperlink{class_bank_account_a323a2a33c5285eb44ad046d52f42bfcd}{add\+Transaction}} (\mbox{\hyperlink{class_transaction}{Transaction}} \texorpdfstring{$\ast$}{*}transaction)
+\item 
+virtual bool \mbox{\hyperlink{class_bank_account_aca81074540421d8f9c9dfa1f5e2ba783}{withdraw}} (double amount)=0
+\item 
+virtual std\+::string \mbox{\hyperlink{class_bank_account_a921000191c6e5ac5bb09e00f60f3b2cd}{get\+Type}} () const =0
+\item 
+virtual void \mbox{\hyperlink{class_bank_account_aef3866fc8f6a284a20e34689cb3f3938}{set\+Type}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_bank_account_a9c073d1e16037e07babcd4f503309943}{deposit}} (double amount)=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_bank_account_a70f9ce1361dd6ef6a6ef4a93af22cfd4}{account\+\_\+number\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_bank_account_aaa6ec014153c673bcb900d980c80119d}{balance\+\_\+}}
+\item 
+bool \mbox{\hyperlink{class_bank_account_a9d877c76c31386d94d8aecbfb8d6b29f}{is\+Active\+\_\+}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_transaction}{Transaction}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_bank_account_a3648ef99842cd5d451034a1dc6c57212}{transactions}}
+\item 
+std\+::string \mbox{\hyperlink{class_bank_account_a1bbe0a8cdc6ab99b5043fe46056117aa}{type\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{class_bank_account_a36508bb4b8a5f99baab470a500dc6f23}{owner\+ID}}
+\item 
+\mbox{\hyperlink{class_calculator}{Calculator}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_bank_account_ad61b3cbccabb2351a1e3c4fcdf4e6d95}{calculator\+\_\+}}
+\item 
+\mbox{\hyperlink{class_client}{Client}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_bank_account_a8e49bf47b3b963d88373fa042dd1dbc8}{owner}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_bank_account_aea76f19fafd3cdbd6f15bf9d5b141412}\label{class_bank_account_aea76f19fafd3cdbd6f15bf9d5b141412} 
+\index{BankAccount@{BankAccount}!BankAccount@{BankAccount}}
+\index{BankAccount@{BankAccount}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{BankAccount()}{BankAccount()}}
+{\footnotesize\ttfamily Bank\+Account\+::\+Bank\+Account (\begin{DoxyParamCaption}\item[{std\+::string}]{account\+\_\+number,  }\item[{double}]{balance,  }\item[{bool}]{is\+Active,  }\item[{std\+::string}]{owner\+Pesel,  }\item[{std\+::string}]{type }\end{DoxyParamCaption})}
+
+\Hypertarget{class_bank_account_af8ff84fe814689a9a6e74c5ae36761d8}\label{class_bank_account_af8ff84fe814689a9a6e74c5ae36761d8} 
+\index{BankAccount@{BankAccount}!````~BankAccount@{\texorpdfstring{$\sim$}{\string~}BankAccount}}
+\index{````~BankAccount@{\texorpdfstring{$\sim$}{\string~}BankAccount}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}BankAccount()}{\string~BankAccount()}}
+{\footnotesize\ttfamily Bank\+Account\+::\texorpdfstring{$\sim$}{\string~}\+Bank\+Account (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_bank_account_a323a2a33c5285eb44ad046d52f42bfcd}\label{class_bank_account_a323a2a33c5285eb44ad046d52f42bfcd} 
+\index{BankAccount@{BankAccount}!addTransaction@{addTransaction}}
+\index{addTransaction@{addTransaction}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{addTransaction()}{addTransaction()}}
+{\footnotesize\ttfamily void Bank\+Account\+::add\+Transaction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_transaction}{Transaction}} \texorpdfstring{$\ast$}{*}}]{transaction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\Hypertarget{class_bank_account_a9c073d1e16037e07babcd4f503309943}\label{class_bank_account_a9c073d1e16037e07babcd4f503309943} 
+\index{BankAccount@{BankAccount}!deposit@{deposit}}
+\index{deposit@{deposit}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{deposit()}{deposit()}}
+{\footnotesize\ttfamily virtual void Bank\+Account\+::deposit (\begin{DoxyParamCaption}\item[{double}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_credit_ae3acab6534775ccfb16b60acc34cc30a}{Credit}}, and \mbox{\hyperlink{class_savings_account_a9909b3c1028c34bc49c0a934ab9a3855}{Savings\+Account}}.
+
+\Hypertarget{class_bank_account_a3af00dc7b6a2e56d4f64984c780a7ae0}\label{class_bank_account_a3af00dc7b6a2e56d4f64984c780a7ae0} 
+\index{BankAccount@{BankAccount}!getAccountNumber@{getAccountNumber}}
+\index{getAccountNumber@{getAccountNumber}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{getAccountNumber()}{getAccountNumber()}}
+{\footnotesize\ttfamily std\+::string Bank\+Account\+::get\+Account\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_bank_account_aeb202a68eff290686b9926ad386293be}\label{class_bank_account_aeb202a68eff290686b9926ad386293be} 
+\index{BankAccount@{BankAccount}!getBalance@{getBalance}}
+\index{getBalance@{getBalance}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{getBalance()}{getBalance()}}
+{\footnotesize\ttfamily double Bank\+Account\+::get\+Balance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_bank_account_a80611fa0eddca23c0ea7cd2945daaede}\label{class_bank_account_a80611fa0eddca23c0ea7cd2945daaede} 
+\index{BankAccount@{BankAccount}!getCalculator@{getCalculator}}
+\index{getCalculator@{getCalculator}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{getCalculator()}{getCalculator()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_calculator}{Calculator}} \texorpdfstring{$\ast$}{*} Bank\+Account\+::get\+Calculator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_bank_account_a383c1a29063284e78ab6584845fdc03d}\label{class_bank_account_a383c1a29063284e78ab6584845fdc03d} 
+\index{BankAccount@{BankAccount}!getIsActive@{getIsActive}}
+\index{getIsActive@{getIsActive}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{getIsActive()}{getIsActive()}}
+{\footnotesize\ttfamily bool Bank\+Account\+::get\+Is\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_bank_account_a4df5528233f4f67be96d4e6bfbc715b4}\label{class_bank_account_a4df5528233f4f67be96d4e6bfbc715b4} 
+\index{BankAccount@{BankAccount}!getOwner@{getOwner}}
+\index{getOwner@{getOwner}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{getOwner()}{getOwner()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_client}{Client}} \texorpdfstring{$\ast$}{*} Bank\+Account\+::get\+Owner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_bank_account_a3336abb2fb385cb827c6bf0e9c71413c}\label{class_bank_account_a3336abb2fb385cb827c6bf0e9c71413c} 
+\index{BankAccount@{BankAccount}!getOwnerID@{getOwnerID}}
+\index{getOwnerID@{getOwnerID}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{getOwnerID()}{getOwnerID()}}
+{\footnotesize\ttfamily std\+::string Bank\+Account\+::get\+Owner\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_bank_account_aa460e1f94e53945a79a33e7f6771e9d5}\label{class_bank_account_aa460e1f94e53945a79a33e7f6771e9d5} 
+\index{BankAccount@{BankAccount}!getTransactions@{getTransactions}}
+\index{getTransactions@{getTransactions}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{getTransactions()}{getTransactions()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_transaction}{Transaction}} \texorpdfstring{$\ast$}{*} $>$ Bank\+Account\+::get\+Transactions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_bank_account_ad81b7f18aa5cbc3733821eb8a47c33ea}\label{class_bank_account_ad81b7f18aa5cbc3733821eb8a47c33ea} 
+\index{BankAccount@{BankAccount}!getTransactionsId@{getTransactionsId}}
+\index{getTransactionsId@{getTransactionsId}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{getTransactionsId()}{getTransactionsId()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ Bank\+Account\+::get\+Transactions\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_bank_account_a921000191c6e5ac5bb09e00f60f3b2cd}\label{class_bank_account_a921000191c6e5ac5bb09e00f60f3b2cd} 
+\index{BankAccount@{BankAccount}!getType@{getType}}
+\index{getType@{getType}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily virtual std\+::string Bank\+Account\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_credit_a3c18494c3f97fb3ff8015f0cceeb2b28}{Credit}}, and \mbox{\hyperlink{class_savings_account_ae887822fd175e6977982beaec812ecd1}{Savings\+Account}}.
+
+\Hypertarget{class_bank_account_aa69292f134492a301e20d3d9dee294a7}\label{class_bank_account_aa69292f134492a301e20d3d9dee294a7} 
+\index{BankAccount@{BankAccount}!setAccountNumber@{setAccountNumber}}
+\index{setAccountNumber@{setAccountNumber}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{setAccountNumber()}{setAccountNumber()}}
+{\footnotesize\ttfamily void Bank\+Account\+::set\+Account\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_bank_account_a691745d227fdc391c1edfc72906d3a0b}\label{class_bank_account_a691745d227fdc391c1edfc72906d3a0b} 
+\index{BankAccount@{BankAccount}!setBalance@{setBalance}}
+\index{setBalance@{setBalance}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{setBalance()}{setBalance()}}
+{\footnotesize\ttfamily void Bank\+Account\+::set\+Balance (\begin{DoxyParamCaption}\item[{double}]{balance }\end{DoxyParamCaption})}
+
+\Hypertarget{class_bank_account_a5717f4186e38af1a7677b49683d1616d}\label{class_bank_account_a5717f4186e38af1a7677b49683d1616d} 
+\index{BankAccount@{BankAccount}!setCalculator@{setCalculator}}
+\index{setCalculator@{setCalculator}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{setCalculator()}{setCalculator()}}
+{\footnotesize\ttfamily void Bank\+Account\+::set\+Calculator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_calculator}{Calculator}} \texorpdfstring{$\ast$}{*}}]{calculator }\end{DoxyParamCaption})}
+
+\Hypertarget{class_bank_account_ae9bffacb31429799552b9aadd9c02544}\label{class_bank_account_ae9bffacb31429799552b9aadd9c02544} 
+\index{BankAccount@{BankAccount}!setIsActive@{setIsActive}}
+\index{setIsActive@{setIsActive}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{setIsActive()}{setIsActive()}}
+{\footnotesize\ttfamily void Bank\+Account\+::set\+Is\+Active (\begin{DoxyParamCaption}\item[{bool}]{is\+Acitve }\end{DoxyParamCaption})}
+
+\Hypertarget{class_bank_account_aef3866fc8f6a284a20e34689cb3f3938}\label{class_bank_account_aef3866fc8f6a284a20e34689cb3f3938} 
+\index{BankAccount@{BankAccount}!setType@{setType}}
+\index{setType@{setType}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{setType()}{setType()}}
+{\footnotesize\ttfamily virtual void Bank\+Account\+::set\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_credit_aa939c40c9ee29db48aed4126c918912c}{Credit}}, and \mbox{\hyperlink{class_savings_account_afaf7e542538b977f593bab4421a6166e}{Savings\+Account}}.
+
+\Hypertarget{class_bank_account_ab723d7b42cd8346f5827edb26656823a}\label{class_bank_account_ab723d7b42cd8346f5827edb26656823a} 
+\index{BankAccount@{BankAccount}!showTransactions@{showTransactions}}
+\index{showTransactions@{showTransactions}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{showTransactions()}{showTransactions()}}
+{\footnotesize\ttfamily QString Bank\+Account\+::show\+Transactions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_bank_account_aca81074540421d8f9c9dfa1f5e2ba783}\label{class_bank_account_aca81074540421d8f9c9dfa1f5e2ba783} 
+\index{BankAccount@{BankAccount}!withdraw@{withdraw}}
+\index{withdraw@{withdraw}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{withdraw()}{withdraw()}}
+{\footnotesize\ttfamily virtual bool Bank\+Account\+::withdraw (\begin{DoxyParamCaption}\item[{double}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_credit_a019830175d926001d644fc98acc5d505}{Credit}}, and \mbox{\hyperlink{class_savings_account_aa4fe5437e16563eef2814875822dfc0f}{Savings\+Account}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_bank_account_a70f9ce1361dd6ef6a6ef4a93af22cfd4}\label{class_bank_account_a70f9ce1361dd6ef6a6ef4a93af22cfd4} 
+\index{BankAccount@{BankAccount}!account\_number\_@{account\_number\_}}
+\index{account\_number\_@{account\_number\_}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{account\_number\_}{account\_number\_}}
+{\footnotesize\ttfamily std\+::string Bank\+Account\+::account\+\_\+number\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_bank_account_aaa6ec014153c673bcb900d980c80119d}\label{class_bank_account_aaa6ec014153c673bcb900d980c80119d} 
+\index{BankAccount@{BankAccount}!balance\_@{balance\_}}
+\index{balance\_@{balance\_}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{balance\_}{balance\_}}
+{\footnotesize\ttfamily double Bank\+Account\+::balance\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_bank_account_ad61b3cbccabb2351a1e3c4fcdf4e6d95}\label{class_bank_account_ad61b3cbccabb2351a1e3c4fcdf4e6d95} 
+\index{BankAccount@{BankAccount}!calculator\_@{calculator\_}}
+\index{calculator\_@{calculator\_}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{calculator\_}{calculator\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_calculator}{Calculator}}\texorpdfstring{$\ast$}{*} Bank\+Account\+::calculator\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_bank_account_a9d877c76c31386d94d8aecbfb8d6b29f}\label{class_bank_account_a9d877c76c31386d94d8aecbfb8d6b29f} 
+\index{BankAccount@{BankAccount}!isActive\_@{isActive\_}}
+\index{isActive\_@{isActive\_}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{isActive\_}{isActive\_}}
+{\footnotesize\ttfamily bool Bank\+Account\+::is\+Active\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_bank_account_a8e49bf47b3b963d88373fa042dd1dbc8}\label{class_bank_account_a8e49bf47b3b963d88373fa042dd1dbc8} 
+\index{BankAccount@{BankAccount}!owner@{owner}}
+\index{owner@{owner}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{owner}{owner}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_client}{Client}}\texorpdfstring{$\ast$}{*} Bank\+Account\+::owner\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_bank_account_a36508bb4b8a5f99baab470a500dc6f23}\label{class_bank_account_a36508bb4b8a5f99baab470a500dc6f23} 
+\index{BankAccount@{BankAccount}!ownerID@{ownerID}}
+\index{ownerID@{ownerID}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{ownerID}{ownerID}}
+{\footnotesize\ttfamily std\+::string Bank\+Account\+::owner\+ID\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_bank_account_a3648ef99842cd5d451034a1dc6c57212}\label{class_bank_account_a3648ef99842cd5d451034a1dc6c57212} 
+\index{BankAccount@{BankAccount}!transactions@{transactions}}
+\index{transactions@{transactions}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{transactions}{transactions}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_transaction}{Transaction}}\texorpdfstring{$\ast$}{*}$>$ Bank\+Account\+::transactions\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_bank_account_a1bbe0a8cdc6ab99b5043fe46056117aa}\label{class_bank_account_a1bbe0a8cdc6ab99b5043fe46056117aa} 
+\index{BankAccount@{BankAccount}!type\_@{type\_}}
+\index{type\_@{type\_}!BankAccount@{BankAccount}}
+\doxysubsubsection{\texorpdfstring{type\_}{type\_}}
+{\footnotesize\ttfamily std\+::string Bank\+Account\+::type\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{bankaccount_8h}{bankaccount.\+h}}\item 
+\mbox{\hyperlink{bankaccount_8cpp}{bankaccount.\+cpp}}\end{DoxyCompactItemize}

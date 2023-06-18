@@ -1,0 +1,25 @@
+var class_client =
+[
+    [ "Client", "class_client.html#a8830c841da77178c665756a9ccb32a61", null ],
+    [ "~Client", "class_client.html#a840e519ca781888cbd54181572ebe3a7", null ],
+    [ "getAccountManager", "class_client.html#a516190900afaf25a39663709878dc21b", null ],
+    [ "getDateBirth", "class_client.html#a94a83ff7c289fe8f82179af9e8c11c26", null ],
+    [ "getEmail", "class_client.html#a593ccb0140cb737becf7588ed2f50468", null ],
+    [ "getFullname", "class_client.html#acb76e53aba05709705a64bc19d531f64", null ],
+    [ "getName", "class_client.html#a6865c5e1c8179faa4f3d2a47e500b772", null ],
+    [ "getPassword", "class_client.html#a0abcb43c3d885678556ac4044b060b5a", null ],
+    [ "getPesel", "class_client.html#ae73d52e3a1f7ba6fb2658f84235525cb", null ],
+    [ "getPhoneNumber", "class_client.html#aee3b526f3dadd7a46ab215974ce9273f", null ],
+    [ "getPIN", "class_client.html#a4a57fc73ded8392ec35601345e646142", null ],
+    [ "getSurname", "class_client.html#aa260220735a286d273d984d9f35cf8b3", null ],
+    [ "setAccountManager", "class_client.html#a5da18d3762c52b69dacd7ea63d451091", null ],
+    [ "setDateBirth", "class_client.html#a0a3296dcc1d33f1aa13011e1073f9444", null ],
+    [ "setEmail", "class_client.html#a5b0457a87823705e577944013a00dcce", null ],
+    [ "setName", "class_client.html#aaf84d26c82f8c91bf943edce1044c574", null ],
+    [ "setPassword", "class_client.html#a054197f1f99b125eec4b083ac5809b5f", null ],
+    [ "setPesel", "class_client.html#a567ce9fff0ab375f7195f52cac50733b", null ],
+    [ "setPhoneNumber", "class_client.html#a81297f9a58db863844355b91cfb7beef", null ],
+    [ "setPIN", "class_client.html#a4877f6808f752731b94d713187c7e469", null ],
+    [ "setSurname", "class_client.html#aa44391685f11bee3caa1a12995ef195e", null ],
+    [ "verifyPIN", "class_client.html#a6622a2f9ea73f6d92b4a0761be43573d", null ]
+];

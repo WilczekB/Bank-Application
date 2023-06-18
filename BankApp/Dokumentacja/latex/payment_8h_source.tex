@@ -1,0 +1,26 @@
+\doxysection{payment.\+h}
+\hypertarget{payment_8h_source}{}\label{payment_8h_source}\mbox{\hyperlink{payment_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ PAYMENT\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ PAYMENT\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QDate>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_payment}{Payment}}}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00011\ \ \ \ \ QDate\ date;}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{double}\ capital,\ installment,\ interest;}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_payment}{Payment}}(QDate\ date,\ \textcolor{keywordtype}{double}\ capital,\ \textcolor{keywordtype}{double}\ installment,\ \textcolor{keywordtype}{double}\ interest);}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_payment_a50a747bbef54eabfbd5f811d3d6b4d8b}{getCapital}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_payment_af7c907e4da21a73435a43330000255d8}{getInstallment}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_payment_a4c714f1ca5e79461ccf2cc3a4cfe15d3}{getInterest}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00018\ \ \ \ \ QDate\ \mbox{\hyperlink{class_payment_af507f38d60d8b55cf4800902857c1ea0}{getDate}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PAYMENT\_H}}
+
+\end{DoxyCode}

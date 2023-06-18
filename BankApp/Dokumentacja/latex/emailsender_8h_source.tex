@@ -1,0 +1,35 @@
+\doxysection{emailsender.\+h}
+\hypertarget{emailsender_8h_source}{}\label{emailsender_8h_source}\mbox{\hyperlink{emailsender_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ EMAILSENDER\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ EMAILSENDER\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QtNetwork>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_email_sender}{EmailSender}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{comment}{//Konstruktor}}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_email_sender}{EmailSender}}(QObject*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//Slot\ służący\ do\ wysyłania\ wiadomości\ email}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_email_sender_a95b2ec06bdcb5b6862b889e106a204b7}{send}}();}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//Slot\ służący\ do\ ustawienia\ wartości\ kodu\ weryfikacyjnego}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_email_sender_a13d34280f53c9811aac177d0b9897272}{setVerificationCode}}();}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//Slot\ zwracający\ wartość\ kodu\ weryfikacyjnego}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_email_sender_aff12bb723a45a3227d93a7c2c0fb8afb}{getVerificationCode}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//Pole\ przechowujące\ wartość\ kodu\ weryfikacyjnego}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ code;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ EMAILSENDER\_H}}
+
+\end{DoxyCode}

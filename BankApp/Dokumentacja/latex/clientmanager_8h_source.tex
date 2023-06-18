@@ -1,0 +1,54 @@
+\doxysection{clientmanager.\+h}
+\hypertarget{clientmanager_8h_source}{}\label{clientmanager_8h_source}\mbox{\hyperlink{clientmanager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ CLIENTMANAGER\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ CLIENTMANAGER\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{emailsender_8h}{emailsender.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{client_8h}{client.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <iomanip>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_client_manager}{ClientManager}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//Wektor\ wskaźników\ do\ obiektów\ klasy\ Client,\ który\ przechowuje\ wszystkich\ klientów\ w\ systemie}}
+\DoxyCodeLine{00019\ \ \ \ \ std::vector<Client*>\ clients;}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ klasy\ EmailSender,\ który\ wysyła\ weryfikacyjny\ kod}}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_email_sender}{EmailSender}}*\ emailSender;}
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//Konstruktor}}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_client_manager_ad68355fab62dffa97b8ddc8df4509f7e}{ClientManager}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//Destruktor}}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_client_manager_af605d4fa9dab04b9874bf307277cd8a3}{\string~ClientManager}}();}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//Funkcja\ zapisująca\ do\ pliku\ tekstowego\ zmienione\ dane\ użytkownika}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//@param\ clientUpdated\ wskaźnik\ na\ obiekt\ klasy\ Client}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_client_manager_a5a21a542061ea9c74037d5a0a374f1ba}{updateClient}}(\mbox{\hyperlink{class_client}{Client}}\ *clientUpdated);}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//Funkcja\ weryfikujaca\ poprawność\ zalogowania\ się\ klienta\ do\ systemu}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//@param\ pesel\ przechowuje\ podany\ pesel\ użytkownika}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//@param\ password\ przechowuje\ podane\ hasło\ użytkownika}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_client_manager_aadc315385e75a0551583b17bebcd19d4}{verifyClient}}(\textcolor{keyword}{const}\ std::string\&\ pesel,\ \textcolor{keyword}{const}\ std::string\&\ password);}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//Funkcja\ wczytująca\ klientów\ z\ pliku\ tekstowego}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_client_manager_a8bdada456754f902b2319383b08a5466}{readClientsFromFile}}();}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//Funkcja\ zapisująca\ klientów\ do\ pliku\ tekstowego}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_client_manager_aa2ea44ca74c1420059ca897065148cb7}{writeClientsToFile}}(std::string\ file\_name);}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//Funkcja\ dodająca\ nowy\ obiekt\ klasy\ Client\ do\ wektora\ clients}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//@param\ client\ wskaźnik\ na\ obiekt\ klasy\ Client\ nowego\ klienta}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_client_manager_a805ba1c4aff7d13fb394653ba8b6fd70}{addClient}}(\mbox{\hyperlink{class_client}{Client}}*\ client);}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//Funkcja\ znajdująca\ i\ zwracająca\ klienta}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//Funkcja\ szuka\ w\ wektorze\ clients\ danego\ klienta\ po\ numerze\ pesel\ i\ zwraca\ wskaźnik\ na\ ten\ obiekt}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//@param\ pesel,\ numer\ pesel\ po\ którym\ jest\ szukany\ klient}}
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{class_client}{Client}}*\ \mbox{\hyperlink{class_client_manager_a04283f8cc7efc89cd2dafad285011dd7}{findClient}}(std::string\ pesel)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CLIENTMANAGER\_H}}
+
+\end{DoxyCode}

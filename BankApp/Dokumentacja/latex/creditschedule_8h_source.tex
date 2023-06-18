@@ -1,0 +1,88 @@
+\doxysection{creditschedule.\+h}
+\hypertarget{creditschedule_8h_source}{}\label{creditschedule_8h_source}\mbox{\hyperlink{creditschedule_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ CREDITSCHEDULE\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ CREDITSCHEDULE\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{accountmanager_8h}{accountmanager.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{client_8h}{client.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_credit_schedule}{CreditSchedule}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{//Pole\ przechowujące\ okres\ finansowania}}
+\DoxyCodeLine{00015\ \ \ \ \ std::string\ financialPeriod\_;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//Pole\ przechowującae\ wartość\ inwestycji}}
+\DoxyCodeLine{00017\ \ \ \ \ std::string\ investmentValue\_;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//Pole\ przechowujące\ datę\ startu\ kredytu}}
+\DoxyCodeLine{00019\ \ \ \ \ std::string\ startDate\_;}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//Pole\ przechowujące\ prowizję\ kredytu}}
+\DoxyCodeLine{00021\ \ \ \ \ std::string\ commision\_;}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//Pole\ przechowujące\ oprocentowanie\ kredytu}}
+\DoxyCodeLine{00023\ \ \ \ \ std::string\ interest\_;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//Pole\ przechowujące\ wartość\ miesięcznej\ raty}}
+\DoxyCodeLine{00025\ \ \ \ \ std::string\ installment\_;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//Wektor\ wartości\ typu\ double\ przechowujący\ ratę\ kapitałową}}
+\DoxyCodeLine{00027\ \ \ \ \ std::vector<double>\ capital\_payments;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//Wektor\ wartości\ typu\ double\ przechowujący\ ratę\ odsetkową}}
+\DoxyCodeLine{00029\ \ \ \ \ std::vector<double>\ interest\_payments;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//Wektor\ wartości\ typu\ double\ przechowujący\ raty\ miesięczne}}
+\DoxyCodeLine{00031\ \ \ \ \ std::vector<double>\ installments;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//Wektor\ wartości\ typu\ double\ przechowujący\ saldo\ zadłużenia}}
+\DoxyCodeLine{00033\ \ \ \ \ std::vector<double>\ balances;}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//Wektor\ wartości\ typu\ std::string\ przechowujący\ daty\ następnych\ rat}}
+\DoxyCodeLine{00035\ \ \ \ \ std::vector<std::string>\ dates;}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ typu\ Client}}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_client}{Client}}\ *client\_;}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ typu\ AccountManager}}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{class_account_manager}{AccountManager}}\ *accManager;}
+\DoxyCodeLine{00040\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//Konstruktor}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//@param\ client\ wskaźnik\ na\ obiekt\ klasy\ Client}}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{class_credit_schedule}{CreditSchedule}}(\mbox{\hyperlink{class_client}{Client}}\ *client);}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//Destruktor}}
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{class_credit_schedule_a27586362d124d11c9b3db69bf156749e}{\string~CreditSchedule}}();}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//Funkcja\ wczytująca\ harmonogram\ spłaty\ kredytu\ z\ pliku\ tekstowego}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//@param\ acc\_number\ przechowuje\ numer\ konta\ kredytowego}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_credit_schedule_ad871ebf864bcef3de7af076a92b6b0c2}{readSchedule}}(\textcolor{keyword}{const}\ std::string\ acc\_number);}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//Funkcja\ aktualizująca\ pole\ wyświetlające\ saldo\ zadłużenia}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//@param\ amount\ przechowuje\ kwotę}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//@param\ acc\_number\ przechowuje\ numer\ konta\ kredytowego}}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_credit_schedule_a5114df739f70e7196d9180ca4a8417c2}{updateBalance}}(\textcolor{keywordtype}{double}\ amount,\ \textcolor{keyword}{const}\ std::string\ acc\_number);}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//Funkcja\ przechodząca\ do\ następnej\ wartości\ w\ wektorze\ capital\_payments}}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_credit_schedule_ae3f433b30c1f3fe9fb6e7105d6a19b47}{nextCapitalPayment}}();}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//Funkcja\ przechodząca\ do\ następnej\ wartości\ w\ wektorze\ interest\_payments}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_credit_schedule_ae0000888ec5d548f0186464f221c478d}{nextInterestPayment}}();}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{//Funkcja\ przechodząca\ do\ następnej\ wartości\ w\ wektorze\ balances}}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_credit_schedule_a0a39e43abd16a3044748d2052e820dd7}{nextBalance}}();}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//Funkcja\ przechodząca\ do\ następnej\ wartości\ w\ wektorze\ dates}}
+\DoxyCodeLine{00060\ \ \ \ \ std::string\ \mbox{\hyperlink{class_credit_schedule_adea3e42f1993c54e0a62e11ec21ae158}{nextDate}}();}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ wartość\ pola\ financialPeriod\_}}
+\DoxyCodeLine{00062\ \ \ \ \ std::string\ \mbox{\hyperlink{class_credit_schedule_af7b58568993b858b48904bde85d25a3e}{getFinancialPeriod}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ wartośc\ pola\ investmentValue\_}}
+\DoxyCodeLine{00064\ \ \ \ \ std::string\ \mbox{\hyperlink{class_credit_schedule_a2af506f4e6ba9b44b57977c23c7ae790}{getInvestmentValue}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ wartość\ pola\ startDate\_}}
+\DoxyCodeLine{00066\ \ \ \ \ std::string\ \mbox{\hyperlink{class_credit_schedule_a07738c58a7e86f069ac43850dc16e262}{getStartDate}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ wartość\ pola\ commision\_}}
+\DoxyCodeLine{00068\ \ \ \ \ std::string\ \mbox{\hyperlink{class_credit_schedule_a861d41e9f198f9e151c06e17931d7c49}{getCommision}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ wartość\ pola\ inerest\_}}
+\DoxyCodeLine{00070\ \ \ \ \ std::string\ \mbox{\hyperlink{class_credit_schedule_abd70cc11e5aab727b72bdcbd28e54c3c}{getInterest}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ wartość\ pola\ installment\_}}
+\DoxyCodeLine{00072\ \ \ \ \ std::string\ \mbox{\hyperlink{class_credit_schedule_a690eda3a6b38a4020fc2d2f9008ce21b}{getInstallment}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ wektor\ interest\_payments}}
+\DoxyCodeLine{00074\ \ \ \ \ std::vector<double>\ \mbox{\hyperlink{class_credit_schedule_a1cd85ad0c2c8614778db327e3a8e23d9}{getInterestPayments}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ wektor\ capital\_payments}}
+\DoxyCodeLine{00076\ \ \ \ \ std::vector<double>\ \mbox{\hyperlink{class_credit_schedule_a43bbf258f7c59a8918a9bbaa2b71afb1}{getCapitalPayments}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ wektor\ dates}}
+\DoxyCodeLine{00078\ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{class_credit_schedule_a57f2e4a51a5e64f19cfce85a68dbc25c}{getDates}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ wektor\ balances}}
+\DoxyCodeLine{00080\ \ \ \ \ std::vector<double>\ \mbox{\hyperlink{class_credit_schedule_ad6a1d57b584fa3ca106e463b65ff0607}{getBalances}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00081\ \};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CREDITSCHEDULE\_H}}
+
+\end{DoxyCode}

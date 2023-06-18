@@ -1,0 +1,41 @@
+\doxysection{bank.\+h}
+\hypertarget{bank_8h_source}{}\label{bank_8h_source}\mbox{\hyperlink{bank_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ BANK\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ BANK\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{clientmanager_8h}{clientmanager.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bank}{Bank}}}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ ClientManager,\ który\ zarządza\ klientami}}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{class_client_manager}{ClientManager}}*\ clientManager;}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{//Konstruktor}}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_bank_a95972e189e85e1a572348811a8bf0d57}{Bank}}();}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//Destruktor}}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_bank_a86eb33b90cf9dbf0a528155c5bfde004}{\string~Bank}}();}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ wskaźnik\ na\ obiekt\ ClientManager}}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_client_manager}{ClientManager}}*\ \mbox{\hyperlink{class_bank_a7ec70d71808df6197ea61be8226f941b}{getClientManager}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//Funkcja\ logowania}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//Funkcja\ realizuje\ proces\ logowania\ się\ użytkownika\ do\ systemu\ bankowego}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//@param\ password\_\ pole\ przechowujące\ hasło\ użytkownika}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//@param\ pesel\_\ pole\ przechowujące\ pesel\ użytkownika}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bank_a45ddbe05133b16533bdc93b7bdd9177f}{login}}(std::string\ password\_,\ std::string\ pesel\_);}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//Funkcja\ wylogowania}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//Funkcja\ realizuje\ proces\ wylogowania\ się\ użytkownika\ z\ systemu\ bankowego}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bank_a1dadc848d5a7f54dca9a44c4ef1206b9}{logout}}();}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//Funkcja\ rejestracji}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//Funkcja\ realizuje\ proces\ rejestracji\ nowego\ użytkownika\ do\ systemu\ bankowego}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bank_a37c4faefe27fea0411aa4afdb8f2f12b}{registration}}();}
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BANK\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,91 @@
+\doxysection{bankaccount.\+h}
+\hypertarget{bankaccount_8h_source}{}\label{bankaccount_8h_source}\mbox{\hyperlink{bankaccount_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ BANKACCOUNT\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ BANKACCOUNT\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{transaction_8h}{transaction.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{calculator_8h}{calculator.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QMessageBox>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_client}{Client}};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bank_account}{BankAccount}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//Pole\ przechowujące\ numer\ konta\ użytkownika}}
+\DoxyCodeLine{00019\ \ \ \ \ std::string\ \mbox{\hyperlink{class_bank_account_a70f9ce1361dd6ef6a6ef4a93af22cfd4}{account\_number\_}};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//Pole\ przechowujące\ saldo\ konta\ użytkownika}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_bank_account_aaa6ec014153c673bcb900d980c80119d}{balance\_}};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//Pole\ przechowujące\ wartość\ boolean\ czy\ konto\ jest\ aktywne}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_bank_account_a9d877c76c31386d94d8aecbfb8d6b29f}{isActive\_}};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//Wektor\ wskaźników\ do\ obiektów\ klasy\ Transaction,\ który\ przechowuje\ transakcje\ związane\ z\ tym\ kontem}}
+\DoxyCodeLine{00025\ \ \ \ \ std::vector<Transaction*>\ \mbox{\hyperlink{class_bank_account_a3648ef99842cd5d451034a1dc6c57212}{transactions}};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//Pole\ przechowujące\ typ\ konta}}
+\DoxyCodeLine{00027\ \ \ \ \ std::string\ \mbox{\hyperlink{class_bank_account_a1bbe0a8cdc6ab99b5043fe46056117aa}{type\_}};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//Pole\ przechowujące\ indentyfikator\ właściciela\ konta}}
+\DoxyCodeLine{00029\ \ \ \ \ std::string\ \mbox{\hyperlink{class_bank_account_a36508bb4b8a5f99baab470a500dc6f23}{ownerID}};}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ Calculator,\ który\ służy\ do\ obliczania\ rat,\ bądź\ odsetki}}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_calculator}{Calculator}}*\ \mbox{\hyperlink{class_bank_account_ad61b3cbccabb2351a1e3c4fcdf4e6d95}{calculator\_}};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ Client,\ który\ reprezentuje\ właściciela\ konta}}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_client}{Client}}*\ \mbox{\hyperlink{class_bank_account_a8e49bf47b3b963d88373fa042dd1dbc8}{owner}};}
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//Konstruktor}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//@param\ account\_number\ przechowuje\ numer\ konta}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//@param\ balance\ przechowuje\ saldo\ konta}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//@param\ isActive\ przechowuje\ informacje\ czy\ konto\ jest\ aktywne}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//@param\ ownerPesel\ przechowuje\ pesel\ właściciela\ konta}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//@param\ type\ przechowuje\ informacje\ o\ typie\ konta}}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_bank_account}{BankAccount}}(std::string\ account\_number,\ \textcolor{keywordtype}{double}\ balance,\ \textcolor{keywordtype}{bool}\ isActive,\ std::string\ ownerPesel,\ std::string\ type);}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//Wirtualny\ destruktor}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_bank_account_af8ff84fe814689a9a6e74c5ae36761d8}{\string~BankAccount}}();}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//Funkcja\ ustawiająca\ pole\ isActive\_}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//@param\ isActive}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bank_account_ae9bffacb31429799552b9aadd9c02544}{setIsActive}}(\textcolor{keywordtype}{bool}\ isAcitve);}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//Funkcja\ ustawiająca\ pole\ balance\_}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//@param\ balance}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bank_account_a691745d227fdc391c1edfc72906d3a0b}{setBalance}}(\textcolor{keywordtype}{double}\ balance);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//Funkcja\ ustawiająca\ pole\ calculator\_}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//@param\ calculator}}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bank_account_a5717f4186e38af1a7677b49683d1616d}{setCalculator}}(\mbox{\hyperlink{class_calculator}{Calculator}}*\ calculator);}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//Funkcja\ ustawiająca\ pole\ account\_number\_}}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bank_account_aa69292f134492a301e20d3d9dee294a7}{setAccountNumber}}();}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ pole\ account\_number\_}}
+\DoxyCodeLine{00056\ \ \ \ \ std::string\ \mbox{\hyperlink{class_bank_account_a3af00dc7b6a2e56d4f64984c780a7ae0}{getAccountNumber}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ pole\ isActive\_}}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_bank_account_a383c1a29063284e78ab6584845fdc03d}{getIsActive}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ pole\ balance\_}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_bank_account_aeb202a68eff290686b9926ad386293be}{getBalance}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ pole\ transactions}}
+\DoxyCodeLine{00062\ \ \ \ \ std::vector<Transaction*>\ \mbox{\hyperlink{class_bank_account_aa460e1f94e53945a79a33e7f6771e9d5}{getTransactions}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ pole\ owner}}
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{class_client}{Client}}*\ \mbox{\hyperlink{class_bank_account_a4df5528233f4f67be96d4e6bfbc715b4}{getOwner}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ id\ wszystkich\ transakcji\ na\ koncie}}
+\DoxyCodeLine{00066\ \ \ \ \ std::vector<int>\ \mbox{\hyperlink{class_bank_account_ad81b7f18aa5cbc3733821eb8a47c33ea}{getTransactionsId}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ pole\ ownerID}}
+\DoxyCodeLine{00068\ \ \ \ \ std::string\ \mbox{\hyperlink{class_bank_account_a3336abb2fb385cb827c6bf0e9c71413c}{getOwnerID}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ pole\ calculator\_}}
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{class_calculator}{Calculator}}*\ \mbox{\hyperlink{class_bank_account_a80611fa0eddca23c0ea7cd2945daaede}{getCalculator}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{//Funkcja\ wyświetlająca\ wszystkie\ transakcje\ na\ koncie}}
+\DoxyCodeLine{00072\ \ \ \ \ QString\ \mbox{\hyperlink{class_bank_account_ab723d7b42cd8346f5827edb26656823a}{showTransactions}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{comment}{//Wirtualna\ funkcja\ przypisująca\ transakcję\ do\ konta}}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{comment}{//@param\ transaction\ wskaźnik\ na\ obiekt\ Transaction}}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bank_account_a323a2a33c5285eb44ad046d52f42bfcd}{addTransaction}}(\mbox{\hyperlink{class_transaction}{Transaction}}*\ transaction);}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{comment}{//Czysto\ wirtualna\ funkcja\ wypłacająca\ środki\ z\ konta}}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_bank_account_aca81074540421d8f9c9dfa1f5e2ba783}{withdraw}}(\textcolor{keywordtype}{double}\ amount)\ =\ 0;}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{comment}{//Czysto\ wirtualna\ funkcja\ zwracająca\ typ\ konta}}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{class_bank_account_a921000191c6e5ac5bb09e00f60f3b2cd}{getType}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{comment}{//Czysto\ wirtualna\ funkcja\ ustawiająca\ typ\ konta}}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bank_account_aef3866fc8f6a284a20e34689cb3f3938}{setType}}()\ =\ 0;}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{comment}{//Czysto\ wirtualna\ funkcja\ wpłacająca\ środki\ na\ konto}}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bank_account_a9c073d1e16037e07babcd4f503309943}{deposit}}(\textcolor{keywordtype}{double}\ amount)\ =\ 0;}
+\DoxyCodeLine{00084\ \};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BANKACCOUNT\_H}}
+
+\end{DoxyCode}

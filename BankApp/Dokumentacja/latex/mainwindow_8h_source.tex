@@ -1,0 +1,78 @@
+\doxysection{mainwindow.\+h}
+\hypertarget{mainwindow_8h_source}{}\label{mainwindow_8h_source}\mbox{\hyperlink{mainwindow_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MAINWINDOW\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MAINWINDOW\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{bank_8h}{bank.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{accountswindow_8h}{accountswindow.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{mydatawindow_8h}{mydatawindow.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{statisticswindow_8h}{statisticswindow.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{creditcalculatorwindow_8h}{creditcalculatorwindow.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{newaccountwindow_8h}{newaccountwindow.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{witdrawalwindow_8h}{witdrawalwindow.h}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window}{MainWindow}};}
+\DoxyCodeLine{00015\ \}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window}{MainWindow}}\ :\ \textcolor{keyword}{public}\ QMainWindow}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//Konstruktor}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//@param\ parent\ wskaźnik\ do\ obiektu\ bazowego}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//@param\ client\ wskaźnik\ do\ obiekt\ klasy\ Client}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//@param\ clientManager\ wskaźnik\ na\ obiekt\ klasy\ ClientManager}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_main_window}{MainWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr},\ \mbox{\hyperlink{class_client}{Client}}\ *client\ =\ \textcolor{keyword}{nullptr},\ \mbox{\hyperlink{class_client_manager}{ClientManager}}\ *clientManager\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//Destruktor}}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{\string~MainWindow}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//Slot\ realizujący\ przejście\ do\ interfejsu\ accountswindow}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_myAccountsButton\_clicked();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//Slot\ realizujący\ przejście\ do\ interfejsu\ mydatawindow}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_myDataButton\_clicked();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//Slot\ realizujący\ przejście\ do\ interfejsu\ statisticswindow}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_myStatsButton\_clicked();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//Slot\ realizujący\ przejście\ do\ interfejsu\ creditcalculatorwindow}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_creditCalculatorButton\_clicked();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//Slot\ realizujący\ wyjście\ z\ systemu}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_logoutButton\_clicked();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//Slot\ realizujący\ przejście\ do\ interfejsu\ newaccountwindow}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_newAccountButton\_clicked();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//Slot\ realizujący\ przejście\ do\ interfejsu\ witdrawalwindow}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_witdrawalButton\_clicked();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ reprezentujący\ interfejs\ użytkownika\ UI}}
+\DoxyCodeLine{00054\ \ \ \ \ Ui::MainWindow\ *ui;}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ klasy\ Client}}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{class_client}{Client}}\ *client\_;}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ klasy\ ClientManager}}
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{class_client_manager}{ClientManager}}\ *clientManager\_;}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ klasy\ AccountsWindow}}
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{class_accounts_window}{AccountsWindow}}\ *accountWindow;}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ klasy\ StatisticsWindow}}
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{class_statistics_window}{StatisticsWindow}}\ *statsWindow;}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ klasy\ MyDataWindow}}
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{class_my_data_window}{MyDataWindow}}\ *mydataWindow;}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ klasy\ creditCalculatorWindow}}
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{classcredit_calculator_window}{creditCalculatorWindow}}\ *calculatorWindow;}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ klasy\ NewAccountWindow}}
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{class_new_account_window}{NewAccountWindow}}\ *newAccountWindow;}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ klasy\ WitdrawalWindow}}
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{class_witdrawal_window}{WitdrawalWindow}}\ *withdrawalWindow;}
+\DoxyCodeLine{00071\ \};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MAINWINDOW\_H}}
+
+\end{DoxyCode}

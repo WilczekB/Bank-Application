@@ -1,0 +1,165 @@
+\doxysection{Credit\+Schedule Class Reference}
+\hypertarget{class_credit_schedule}{}\label{class_credit_schedule}\index{CreditSchedule@{CreditSchedule}}
+
+
+{\ttfamily \#include $<$creditschedule.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_credit_schedule_a765a4a70175884d4cf4ec93f3d415582}{Credit\+Schedule}} (\mbox{\hyperlink{class_client}{Client}} \texorpdfstring{$\ast$}{*}client)
+\item 
+\mbox{\hyperlink{class_credit_schedule_a27586362d124d11c9b3db69bf156749e}{\texorpdfstring{$\sim$}{\string~}\+Credit\+Schedule}} ()
+\item 
+bool \mbox{\hyperlink{class_credit_schedule_ad871ebf864bcef3de7af076a92b6b0c2}{read\+Schedule}} (const std\+::string acc\+\_\+number)
+\item 
+void \mbox{\hyperlink{class_credit_schedule_a5114df739f70e7196d9180ca4a8417c2}{update\+Balance}} (double amount, const std\+::string acc\+\_\+number)
+\item 
+double \mbox{\hyperlink{class_credit_schedule_ae3f433b30c1f3fe9fb6e7105d6a19b47}{next\+Capital\+Payment}} ()
+\item 
+double \mbox{\hyperlink{class_credit_schedule_ae0000888ec5d548f0186464f221c478d}{next\+Interest\+Payment}} ()
+\item 
+double \mbox{\hyperlink{class_credit_schedule_a0a39e43abd16a3044748d2052e820dd7}{next\+Balance}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_credit_schedule_adea3e42f1993c54e0a62e11ec21ae158}{next\+Date}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_credit_schedule_af7b58568993b858b48904bde85d25a3e}{get\+Financial\+Period}} () const
+\item 
+std\+::string \mbox{\hyperlink{class_credit_schedule_a2af506f4e6ba9b44b57977c23c7ae790}{get\+Investment\+Value}} () const
+\item 
+std\+::string \mbox{\hyperlink{class_credit_schedule_a07738c58a7e86f069ac43850dc16e262}{get\+Start\+Date}} () const
+\item 
+std\+::string \mbox{\hyperlink{class_credit_schedule_a861d41e9f198f9e151c06e17931d7c49}{get\+Commision}} () const
+\item 
+std\+::string \mbox{\hyperlink{class_credit_schedule_abd70cc11e5aab727b72bdcbd28e54c3c}{get\+Interest}} () const
+\item 
+std\+::string \mbox{\hyperlink{class_credit_schedule_a690eda3a6b38a4020fc2d2f9008ce21b}{get\+Installment}} () const
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_credit_schedule_a1cd85ad0c2c8614778db327e3a8e23d9}{get\+Interest\+Payments}} () const
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_credit_schedule_a43bbf258f7c59a8918a9bbaa2b71afb1}{get\+Capital\+Payments}} () const
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_credit_schedule_a57f2e4a51a5e64f19cfce85a68dbc25c}{get\+Dates}} () const
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_credit_schedule_ad6a1d57b584fa3ca106e463b65ff0607}{get\+Balances}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_credit_schedule_a765a4a70175884d4cf4ec93f3d415582}\label{class_credit_schedule_a765a4a70175884d4cf4ec93f3d415582} 
+\index{CreditSchedule@{CreditSchedule}!CreditSchedule@{CreditSchedule}}
+\index{CreditSchedule@{CreditSchedule}!CreditSchedule@{CreditSchedule}}
+\doxysubsubsection{\texorpdfstring{CreditSchedule()}{CreditSchedule()}}
+{\footnotesize\ttfamily Credit\+Schedule\+::\+Credit\+Schedule (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_client}{Client}} \texorpdfstring{$\ast$}{*}}]{client }\end{DoxyParamCaption})}
+
+\Hypertarget{class_credit_schedule_a27586362d124d11c9b3db69bf156749e}\label{class_credit_schedule_a27586362d124d11c9b3db69bf156749e} 
+\index{CreditSchedule@{CreditSchedule}!````~CreditSchedule@{\texorpdfstring{$\sim$}{\string~}CreditSchedule}}
+\index{````~CreditSchedule@{\texorpdfstring{$\sim$}{\string~}CreditSchedule}!CreditSchedule@{CreditSchedule}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}CreditSchedule()}{\string~CreditSchedule()}}
+{\footnotesize\ttfamily Credit\+Schedule\+::\texorpdfstring{$\sim$}{\string~}\+Credit\+Schedule (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_credit_schedule_ad6a1d57b584fa3ca106e463b65ff0607}\label{class_credit_schedule_ad6a1d57b584fa3ca106e463b65ff0607} 
+\index{CreditSchedule@{CreditSchedule}!getBalances@{getBalances}}
+\index{getBalances@{getBalances}!CreditSchedule@{CreditSchedule}}
+\doxysubsubsection{\texorpdfstring{getBalances()}{getBalances()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Credit\+Schedule\+::get\+Balances (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_credit_schedule_a43bbf258f7c59a8918a9bbaa2b71afb1}\label{class_credit_schedule_a43bbf258f7c59a8918a9bbaa2b71afb1} 
+\index{CreditSchedule@{CreditSchedule}!getCapitalPayments@{getCapitalPayments}}
+\index{getCapitalPayments@{getCapitalPayments}!CreditSchedule@{CreditSchedule}}
+\doxysubsubsection{\texorpdfstring{getCapitalPayments()}{getCapitalPayments()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Credit\+Schedule\+::get\+Capital\+Payments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_credit_schedule_a861d41e9f198f9e151c06e17931d7c49}\label{class_credit_schedule_a861d41e9f198f9e151c06e17931d7c49} 
+\index{CreditSchedule@{CreditSchedule}!getCommision@{getCommision}}
+\index{getCommision@{getCommision}!CreditSchedule@{CreditSchedule}}
+\doxysubsubsection{\texorpdfstring{getCommision()}{getCommision()}}
+{\footnotesize\ttfamily std\+::string Credit\+Schedule\+::get\+Commision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_credit_schedule_a57f2e4a51a5e64f19cfce85a68dbc25c}\label{class_credit_schedule_a57f2e4a51a5e64f19cfce85a68dbc25c} 
+\index{CreditSchedule@{CreditSchedule}!getDates@{getDates}}
+\index{getDates@{getDates}!CreditSchedule@{CreditSchedule}}
+\doxysubsubsection{\texorpdfstring{getDates()}{getDates()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Credit\+Schedule\+::get\+Dates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_credit_schedule_af7b58568993b858b48904bde85d25a3e}\label{class_credit_schedule_af7b58568993b858b48904bde85d25a3e} 
+\index{CreditSchedule@{CreditSchedule}!getFinancialPeriod@{getFinancialPeriod}}
+\index{getFinancialPeriod@{getFinancialPeriod}!CreditSchedule@{CreditSchedule}}
+\doxysubsubsection{\texorpdfstring{getFinancialPeriod()}{getFinancialPeriod()}}
+{\footnotesize\ttfamily std\+::string Credit\+Schedule\+::get\+Financial\+Period (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_credit_schedule_a690eda3a6b38a4020fc2d2f9008ce21b}\label{class_credit_schedule_a690eda3a6b38a4020fc2d2f9008ce21b} 
+\index{CreditSchedule@{CreditSchedule}!getInstallment@{getInstallment}}
+\index{getInstallment@{getInstallment}!CreditSchedule@{CreditSchedule}}
+\doxysubsubsection{\texorpdfstring{getInstallment()}{getInstallment()}}
+{\footnotesize\ttfamily std\+::string Credit\+Schedule\+::get\+Installment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_credit_schedule_abd70cc11e5aab727b72bdcbd28e54c3c}\label{class_credit_schedule_abd70cc11e5aab727b72bdcbd28e54c3c} 
+\index{CreditSchedule@{CreditSchedule}!getInterest@{getInterest}}
+\index{getInterest@{getInterest}!CreditSchedule@{CreditSchedule}}
+\doxysubsubsection{\texorpdfstring{getInterest()}{getInterest()}}
+{\footnotesize\ttfamily std\+::string Credit\+Schedule\+::get\+Interest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_credit_schedule_a1cd85ad0c2c8614778db327e3a8e23d9}\label{class_credit_schedule_a1cd85ad0c2c8614778db327e3a8e23d9} 
+\index{CreditSchedule@{CreditSchedule}!getInterestPayments@{getInterestPayments}}
+\index{getInterestPayments@{getInterestPayments}!CreditSchedule@{CreditSchedule}}
+\doxysubsubsection{\texorpdfstring{getInterestPayments()}{getInterestPayments()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Credit\+Schedule\+::get\+Interest\+Payments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_credit_schedule_a2af506f4e6ba9b44b57977c23c7ae790}\label{class_credit_schedule_a2af506f4e6ba9b44b57977c23c7ae790} 
+\index{CreditSchedule@{CreditSchedule}!getInvestmentValue@{getInvestmentValue}}
+\index{getInvestmentValue@{getInvestmentValue}!CreditSchedule@{CreditSchedule}}
+\doxysubsubsection{\texorpdfstring{getInvestmentValue()}{getInvestmentValue()}}
+{\footnotesize\ttfamily std\+::string Credit\+Schedule\+::get\+Investment\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_credit_schedule_a07738c58a7e86f069ac43850dc16e262}\label{class_credit_schedule_a07738c58a7e86f069ac43850dc16e262} 
+\index{CreditSchedule@{CreditSchedule}!getStartDate@{getStartDate}}
+\index{getStartDate@{getStartDate}!CreditSchedule@{CreditSchedule}}
+\doxysubsubsection{\texorpdfstring{getStartDate()}{getStartDate()}}
+{\footnotesize\ttfamily std\+::string Credit\+Schedule\+::get\+Start\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_credit_schedule_a0a39e43abd16a3044748d2052e820dd7}\label{class_credit_schedule_a0a39e43abd16a3044748d2052e820dd7} 
+\index{CreditSchedule@{CreditSchedule}!nextBalance@{nextBalance}}
+\index{nextBalance@{nextBalance}!CreditSchedule@{CreditSchedule}}
+\doxysubsubsection{\texorpdfstring{nextBalance()}{nextBalance()}}
+{\footnotesize\ttfamily double Credit\+Schedule\+::next\+Balance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_credit_schedule_ae3f433b30c1f3fe9fb6e7105d6a19b47}\label{class_credit_schedule_ae3f433b30c1f3fe9fb6e7105d6a19b47} 
+\index{CreditSchedule@{CreditSchedule}!nextCapitalPayment@{nextCapitalPayment}}
+\index{nextCapitalPayment@{nextCapitalPayment}!CreditSchedule@{CreditSchedule}}
+\doxysubsubsection{\texorpdfstring{nextCapitalPayment()}{nextCapitalPayment()}}
+{\footnotesize\ttfamily double Credit\+Schedule\+::next\+Capital\+Payment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_credit_schedule_adea3e42f1993c54e0a62e11ec21ae158}\label{class_credit_schedule_adea3e42f1993c54e0a62e11ec21ae158} 
+\index{CreditSchedule@{CreditSchedule}!nextDate@{nextDate}}
+\index{nextDate@{nextDate}!CreditSchedule@{CreditSchedule}}
+\doxysubsubsection{\texorpdfstring{nextDate()}{nextDate()}}
+{\footnotesize\ttfamily std\+::string Credit\+Schedule\+::next\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_credit_schedule_ae0000888ec5d548f0186464f221c478d}\label{class_credit_schedule_ae0000888ec5d548f0186464f221c478d} 
+\index{CreditSchedule@{CreditSchedule}!nextInterestPayment@{nextInterestPayment}}
+\index{nextInterestPayment@{nextInterestPayment}!CreditSchedule@{CreditSchedule}}
+\doxysubsubsection{\texorpdfstring{nextInterestPayment()}{nextInterestPayment()}}
+{\footnotesize\ttfamily double Credit\+Schedule\+::next\+Interest\+Payment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_credit_schedule_ad871ebf864bcef3de7af076a92b6b0c2}\label{class_credit_schedule_ad871ebf864bcef3de7af076a92b6b0c2} 
+\index{CreditSchedule@{CreditSchedule}!readSchedule@{readSchedule}}
+\index{readSchedule@{readSchedule}!CreditSchedule@{CreditSchedule}}
+\doxysubsubsection{\texorpdfstring{readSchedule()}{readSchedule()}}
+{\footnotesize\ttfamily bool Credit\+Schedule\+::read\+Schedule (\begin{DoxyParamCaption}\item[{const std\+::string}]{acc\+\_\+number }\end{DoxyParamCaption})}
+
+\Hypertarget{class_credit_schedule_a5114df739f70e7196d9180ca4a8417c2}\label{class_credit_schedule_a5114df739f70e7196d9180ca4a8417c2} 
+\index{CreditSchedule@{CreditSchedule}!updateBalance@{updateBalance}}
+\index{updateBalance@{updateBalance}!CreditSchedule@{CreditSchedule}}
+\doxysubsubsection{\texorpdfstring{updateBalance()}{updateBalance()}}
+{\footnotesize\ttfamily void Credit\+Schedule\+::update\+Balance (\begin{DoxyParamCaption}\item[{double}]{amount,  }\item[{const std\+::string}]{acc\+\_\+number }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{creditschedule_8h}{creditschedule.\+h}}\item 
+\mbox{\hyperlink{creditschedule_8cpp}{creditschedule.\+cpp}}\end{DoxyCompactItemize}

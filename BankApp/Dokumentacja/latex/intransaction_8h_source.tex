@@ -1,0 +1,30 @@
+\doxysection{intransaction.\+h}
+\hypertarget{intransaction_8h_source}{}\label{intransaction_8h_source}\mbox{\hyperlink{intransaction_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ IN\_TRANSACTION\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ IN\_TRANSACTION\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{transaction_8h}{transaction.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\#include\ "{}bankaccount.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\#include\ "{}client.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_in_transaction}{InTransaction}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_transaction}{Transaction}}\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{comment}{//Konstruktor}}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{comment}{//@param\ amount\ przechowuje\ wartość\ kwoty\ transakcji}}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{//@param\ sender\ przechowuje\ imie\ i\ nazwisko\ wysyłającego\ transakcję}}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{//@param\ senderAccountNumber\ przechowuje\ numer\ konta\ wysyłającego\ transakcję}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//@param\ title\ przechowuje\ tytuł\ transakcji}}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_in_transaction}{InTransaction}}(\textcolor{keywordtype}{double}\ amount,\ \textcolor{keyword}{const}\ std::string\&\ sender,\ \textcolor{keyword}{const}\ std::string\&\ senderAccountNumber,\ \textcolor{keyword}{const}\ std::string\&\ title);}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ typ\ transakcji}}
+\DoxyCodeLine{00019\ \ \ \ \ std::string\ \mbox{\hyperlink{class_in_transaction_af923151ef10d7e61b04f1db807935692}{getType}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ informacje\ o\ transakcji}}
+\DoxyCodeLine{00021\ \ \ \ \ std::string\ \mbox{\hyperlink{class_in_transaction_ae995188e523c39c9c627725d1e4a183f}{getInfo}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00022\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ IN\_TRANSACTION\_H}}
+\DoxyCodeLine{00025\ }
+
+\end{DoxyCode}

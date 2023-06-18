@@ -1,0 +1,74 @@
+\doxysection{mycreditwindow.\+h}
+\hypertarget{mycreditwindow_8h_source}{}\label{mycreditwindow_8h_source}\mbox{\hyperlink{mycreditwindow_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MYCREDITWINDOW\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MYCREDITWINDOW\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QDialog>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{client_8h}{client.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{bankaccount_8h}{bankaccount.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{accountmanager_8h}{accountmanager.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{credit_8h}{credit.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{creditschedule_8h}{creditschedule.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_my_credit_window}{MyCreditWindow}};}
+\DoxyCodeLine{00013\ \}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_my_credit_window}{MyCreditWindow}}\ :\ \textcolor{keyword}{public}\ QDialog}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//Konstruktor}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//@param\ parent\ wskaźnik\ do\ obiektu\ bazowego}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//@param\ client\ wskaźnik\ do\ obiektu\ klasy\ Client}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_my_credit_window}{MyCreditWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr},\ \mbox{\hyperlink{class_client}{Client}}\ *client\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//Destruktor}}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_my_credit_window_aec1c447b20d7665682239a303a9c6353}{\string~MyCreditWindow}}();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//Slot\ realizujący\ spłatę\ raty\ miesięcznej\ i\ wyświetlenie\ następnej}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_updateButton\_clicked();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//Slot\ realizujący\ wyjście\ z\ interfejsu\ MyCreditWindow}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_exitButton\_clicked();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//Slot\ realizujący\ przekazanie\ wybranego\ w\ QComboBox\ numeru\ konta\ kredytowego}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_creditNumberBox\_currentTextChanged(\textcolor{keyword}{const}\ QString\ \&arg1);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//Funkcja\ ustawiająca\ dane\ o\ harmonogramie\ spłaty\ kredytu}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//@param\ accNumber\ przechowuje\ wybrany\ \ numer\ konta\ kredytowego}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ setData(\textcolor{keyword}{const}\ std::string\ accNumber);}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//Funckja\ ustawiająca\ numery\ kont\ kredytowych\ w\ QComboBox}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ setComboBox();}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//Funkcja\ ustawiająca\ pola\ tekstowe\ tylko\ do\ odczytu}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ setToReadOnly();}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//Funkcja\ ustawiająca\ pierwotne\ ogólne\ dane\ dotyczące\ kredytu}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ setInitialText();}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//Funkcja\ aktualizująca\ raty\ kapitałowe}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//@param\ capital\ przechowuje\ kwotę\ raty\ kapitałowej}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ updateCapitalPayment(\textcolor{keywordtype}{double}\ capital);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//Funkcja\ aktualizująca\ raty\ odsetkowe}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//@param\ interest\ przechowuje\ kwotę\ raty\ odsetkowej}}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ updateInterestPayment(\textcolor{keywordtype}{double}\ interest);}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//Funkcja\ aktualizująca\ datę\ kolejnej\ raty\ kredytowej}}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{//@param\ date\ przechowuje\ kolejną\ datę}}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ updateDate(\textcolor{keyword}{const}\ std::string\ date);}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//Funkcja\ aktualizująca\ kolejne\ saldo\ zadłużenia}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{//@param\ balance\ przechowuje\ kolejne\ saldo\ zadłużenia}}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ updateBalance(\textcolor{keywordtype}{double}\ balance);}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ reprezentujący\ interfejs\ użytkownika\ UI}}
+\DoxyCodeLine{00060\ \ \ \ \ Ui::MyCreditWindow\ *ui;}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ klasy\ Client}}
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{class_client}{Client}}\ *client\_;}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ klasy\ AccountManager}}
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{class_account_manager}{AccountManager}}\ *accManager;}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ klasy\ CreditSchdule}}
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{class_credit_schedule}{CreditSchedule}}\ *creditSchedule;}
+\DoxyCodeLine{00067\ \};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MYCREDITWINDOW\_H}}
+
+\end{DoxyCode}

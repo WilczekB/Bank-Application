@@ -1,0 +1,80 @@
+\doxysection{credit.\+h}
+\hypertarget{credit_8h_source}{}\label{credit_8h_source}\mbox{\hyperlink{credit_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ CREDIT\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ CREDIT\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{bankaccount_8h}{bankaccount.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QDate>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_client}{Client}};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_credit}{Credit}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_bank_account}{BankAccount}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{//Pole\ przechowujące\ datę\ startu\ kredytu}}
+\DoxyCodeLine{00016\ \ \ \ \ QDate\ start\_date\_;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//Pole\ przechowujące\ okres\ finansowania}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ financial\_period\_;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//Pola\ przechowujące\ wartość\ inwestycji,\ oprocentowanie\ i\ prowizję}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{double}\ investment\_value\_,\ percentage\_,\ comission\_;}
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//Konstruktor}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//@param\ account\_number\ przechowuje\ numer\ konta\ kredytowego}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//@param\ balance\ przechowuje\ stan\ salda\ konta}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//@param\ start\_date\ przechowuje\ początkową\ datę\ kredytu}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//@param\ financial\_period\ przechowuje\ okres\ finansowania\ kredytu}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//@param\ investment\_value\ przechowuje\ wartość\ inwestycji}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//@param\ percentage\ przechowuje\ wartość\ oprocentowania\ kredytu}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//@param\ commision\ przechowuje\ wartość\ prowizji\ kredytu}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//@param\ ownerPesel\ przechowuje\ numer\ pesel\ kredytobiorcy}}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_credit}{Credit}}(std::string\ account\_number,\ \textcolor{keywordtype}{double}\ balance,\ QDate\ start\_date,\ \textcolor{keywordtype}{int}\ financial\_period,\ \textcolor{keywordtype}{double}\ investment\_value,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ percentage,\ \textcolor{keywordtype}{double}\ commision,\ std::string\ ownerPesel);}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//Destruktor}}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_credit_ae087c6d2e859815d6e3ae79eaf7e133b}{\string~Credit}}();}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//Funkcja\ ustawiająca\ wartość\ pola\ start\_date\_}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//@param\ start\_date\ przechowuje\ datę\ startu\ kredytu}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_credit_a15d749166803b5df1d72b2a333a6488f}{setStartDate}}(QDate\ start\_date);}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//Funkcja\ ustawiająca\ wartość\ pola\ financial\_period\_}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//@param\ financial\_period\ przechowuje\ okres\ inwestycji}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_credit_a315bc51e94e49d5f798ad7c5caa96a45}{setFinancialPeriod}}(\textcolor{keywordtype}{int}\ financial\_period);}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//Funkcja\ ustawiająca\ wartość\ pola\ investment\_value\_}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//@param\ investment\_value\ przechowuje\ wartość\ inwestycji}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_credit_a0346417b4cda09a7585f7223c71efaa1}{setInvestmentValue}}(\textcolor{keywordtype}{double}\ investment\_value);}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//Funkcja\ ustawiająca\ wartość\ pola\ percentage\_}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//@param\ percentage\ przechowuje\ oprocentowanie\ kredytu}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_credit_a4558b99df0ff11861ccf0c666b7c52dd}{setPercentage}}(\textcolor{keywordtype}{double}\ percentage);}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//Funkcja\ ustawiająca\ wartość\ pola\ commision\_}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//@param\ commision\ przechowuje\ prowizje\ kredytu}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_credit_ae0e919c995d2532db68fd248822f082a}{setCommision}}(\textcolor{keywordtype}{double}\ commision);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ wartość\ pola\ start\_date\_}}
+\DoxyCodeLine{00051\ \ \ \ \ QDate\ \mbox{\hyperlink{class_credit_a829cd4adf13c12159a4611bf8f86935d}{getStartDate}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ wartość\ pola\ financial\_period\_}}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_credit_a2db3102565c919f30f3acbda1771e97f}{getFinancialPeriod}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ wartość\ pola\ investment\_value\_}}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_credit_a314284528e2c780928560d83e8e9f2a6}{getInvestmentValue}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ wartość\ pola\ commision\_}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_credit_ae05ec046b1fa84c3fe5117b1754e23c4}{getCommision}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ wartość\ pola\ percentage\_}}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_credit_a24938775cdeb4885cf9f6e7c2d6e43ea}{getPercentage}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//Funkcja\ wypłacająca\ środki\ z\ konta}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//@param\ amount\ ilość\ środków\ do\ wypłaty}}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_credit_a019830175d926001d644fc98acc5d505}{withdraw}}(\textcolor{keywordtype}{double}\ amount);}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ typ\ konta}}
+\DoxyCodeLine{00064\ \ \ \ \ std::string\ \mbox{\hyperlink{class_credit_a3c18494c3f97fb3ff8015f0cceeb2b28}{getType}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//Funkcja\ ustawiająca\ typ\ konta}}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_credit_aa939c40c9ee29db48aed4126c918912c}{setType}}();}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{comment}{//Funkcja\ wpłacająca\ środki\ na\ konto}}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{//@param\ amount\ ilość\ środków\ do\ wpłaty}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_credit_ae3acab6534775ccfb16b60acc34cc30a}{deposit}}(\textcolor{keywordtype}{double}\ amount);}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{//Funkcja\ tworząca\ harmonogram\ spłaty\ kredytu}}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_credit_a636d0cf2d25aa2e4bed7272761c403eb}{calculateCredit}}();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CREDIT\_H}}
+
+\end{DoxyCode}

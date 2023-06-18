@@ -1,0 +1,37 @@
+\doxysection{outtransaction.\+h}
+\hypertarget{outtransaction_8h_source}{}\label{outtransaction_8h_source}\mbox{\hyperlink{outtransaction_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ OUTTRANSACTION\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ OUTTRANSACTION\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{transaction_8h}{transaction.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{bankaccount_8h}{bankaccount.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{clientmanager_8h}{clientmanager.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bank_account}{BankAccount}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_out_transaction}{OutTransaction}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_transaction}{Transaction}}\{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{comment}{//Konstruktor}}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{//@param\ amount\ przechowuje\ kwotę\ transakcji}}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{//@param\ reciver\ przechowuje\ imię\ i\ nazwisko\ odbiorcy\ transakcji}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//@param\ title\ przechowuje\ tytuł\ transakcji}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//@param\ senderAccountNumber\ przechowuje\ numer\ konta\ wysyłającego\ transakcję}}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_out_transaction}{OutTransaction}}(\textcolor{keywordtype}{double}\ amount,\ \textcolor{keyword}{const}\ std::string\&\ reciver,\ \textcolor{keyword}{const}\ std::string\&\ title,\ \mbox{\hyperlink{class_bank_account}{BankAccount}}*\ senderAccountNumber);}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//Destruktor}}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_out_transaction_a489cc115b3f628e8e940870799c86681}{\string~OutTransaction}}();}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ typ\ transakcji}}
+\DoxyCodeLine{00022\ \ \ \ \ std::string\ \mbox{\hyperlink{class_out_transaction_a6c3ca71b5638568c10bea12dae7378a7}{getType}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ informacje\ o\ transakcji}}
+\DoxyCodeLine{00024\ \ \ \ \ std::string\ \mbox{\hyperlink{class_out_transaction_ab597bc33b298ef29de1259f02a5e4d0e}{getInfo}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00025\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ klasy\ BankAccount}}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_bank_account}{BankAccount}}*\ senderAccount;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ klasy\ ClientManager}}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_client_manager}{ClientManager}}\ *manager;}
+\DoxyCodeLine{00030\ \};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ OUTTRANSACTION\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,85 @@
+\doxysection{Client\+Manager Class Reference}
+\hypertarget{class_client_manager}{}\label{class_client_manager}\index{ClientManager@{ClientManager}}
+
+
+{\ttfamily \#include $<$clientmanager.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_client_manager_ad68355fab62dffa97b8ddc8df4509f7e}{Client\+Manager}} ()
+\item 
+\mbox{\hyperlink{class_client_manager_af605d4fa9dab04b9874bf307277cd8a3}{\texorpdfstring{$\sim$}{\string~}\+Client\+Manager}} ()
+\item 
+void \mbox{\hyperlink{class_client_manager_a5a21a542061ea9c74037d5a0a374f1ba}{update\+Client}} (\mbox{\hyperlink{class_client}{Client}} \texorpdfstring{$\ast$}{*}client\+Updated)
+\item 
+bool \mbox{\hyperlink{class_client_manager_aadc315385e75a0551583b17bebcd19d4}{verify\+Client}} (const std\+::string \&pesel, const std\+::string \&password)
+\item 
+void \mbox{\hyperlink{class_client_manager_a8bdada456754f902b2319383b08a5466}{read\+Clients\+From\+File}} ()
+\item 
+void \mbox{\hyperlink{class_client_manager_aa2ea44ca74c1420059ca897065148cb7}{write\+Clients\+To\+File}} (std\+::string file\+\_\+name)
+\item 
+bool \mbox{\hyperlink{class_client_manager_a805ba1c4aff7d13fb394653ba8b6fd70}{add\+Client}} (\mbox{\hyperlink{class_client}{Client}} \texorpdfstring{$\ast$}{*}client)
+\item 
+\mbox{\hyperlink{class_client}{Client}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_client_manager_a04283f8cc7efc89cd2dafad285011dd7}{find\+Client}} (std\+::string pesel) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_client_manager_ad68355fab62dffa97b8ddc8df4509f7e}\label{class_client_manager_ad68355fab62dffa97b8ddc8df4509f7e} 
+\index{ClientManager@{ClientManager}!ClientManager@{ClientManager}}
+\index{ClientManager@{ClientManager}!ClientManager@{ClientManager}}
+\doxysubsubsection{\texorpdfstring{ClientManager()}{ClientManager()}}
+{\footnotesize\ttfamily Client\+Manager\+::\+Client\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_client_manager_af605d4fa9dab04b9874bf307277cd8a3}\label{class_client_manager_af605d4fa9dab04b9874bf307277cd8a3} 
+\index{ClientManager@{ClientManager}!````~ClientManager@{\texorpdfstring{$\sim$}{\string~}ClientManager}}
+\index{````~ClientManager@{\texorpdfstring{$\sim$}{\string~}ClientManager}!ClientManager@{ClientManager}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ClientManager()}{\string~ClientManager()}}
+{\footnotesize\ttfamily Client\+Manager\+::\texorpdfstring{$\sim$}{\string~}\+Client\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_client_manager_a805ba1c4aff7d13fb394653ba8b6fd70}\label{class_client_manager_a805ba1c4aff7d13fb394653ba8b6fd70} 
+\index{ClientManager@{ClientManager}!addClient@{addClient}}
+\index{addClient@{addClient}!ClientManager@{ClientManager}}
+\doxysubsubsection{\texorpdfstring{addClient()}{addClient()}}
+{\footnotesize\ttfamily bool Client\+Manager\+::add\+Client (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_client}{Client}} \texorpdfstring{$\ast$}{*}}]{client }\end{DoxyParamCaption})}
+
+\Hypertarget{class_client_manager_a04283f8cc7efc89cd2dafad285011dd7}\label{class_client_manager_a04283f8cc7efc89cd2dafad285011dd7} 
+\index{ClientManager@{ClientManager}!findClient@{findClient}}
+\index{findClient@{findClient}!ClientManager@{ClientManager}}
+\doxysubsubsection{\texorpdfstring{findClient()}{findClient()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_client}{Client}} \texorpdfstring{$\ast$}{*} Client\+Manager\+::find\+Client (\begin{DoxyParamCaption}\item[{std\+::string}]{pesel }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_client_manager_a8bdada456754f902b2319383b08a5466}\label{class_client_manager_a8bdada456754f902b2319383b08a5466} 
+\index{ClientManager@{ClientManager}!readClientsFromFile@{readClientsFromFile}}
+\index{readClientsFromFile@{readClientsFromFile}!ClientManager@{ClientManager}}
+\doxysubsubsection{\texorpdfstring{readClientsFromFile()}{readClientsFromFile()}}
+{\footnotesize\ttfamily void Client\+Manager\+::read\+Clients\+From\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_client_manager_a5a21a542061ea9c74037d5a0a374f1ba}\label{class_client_manager_a5a21a542061ea9c74037d5a0a374f1ba} 
+\index{ClientManager@{ClientManager}!updateClient@{updateClient}}
+\index{updateClient@{updateClient}!ClientManager@{ClientManager}}
+\doxysubsubsection{\texorpdfstring{updateClient()}{updateClient()}}
+{\footnotesize\ttfamily void Client\+Manager\+::update\+Client (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_client}{Client}} \texorpdfstring{$\ast$}{*}}]{client\+Updated }\end{DoxyParamCaption})}
+
+\Hypertarget{class_client_manager_aadc315385e75a0551583b17bebcd19d4}\label{class_client_manager_aadc315385e75a0551583b17bebcd19d4} 
+\index{ClientManager@{ClientManager}!verifyClient@{verifyClient}}
+\index{verifyClient@{verifyClient}!ClientManager@{ClientManager}}
+\doxysubsubsection{\texorpdfstring{verifyClient()}{verifyClient()}}
+{\footnotesize\ttfamily bool Client\+Manager\+::verify\+Client (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{pesel,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption})}
+
+\Hypertarget{class_client_manager_aa2ea44ca74c1420059ca897065148cb7}\label{class_client_manager_aa2ea44ca74c1420059ca897065148cb7} 
+\index{ClientManager@{ClientManager}!writeClientsToFile@{writeClientsToFile}}
+\index{writeClientsToFile@{writeClientsToFile}!ClientManager@{ClientManager}}
+\doxysubsubsection{\texorpdfstring{writeClientsToFile()}{writeClientsToFile()}}
+{\footnotesize\ttfamily void Client\+Manager\+::write\+Clients\+To\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{clientmanager_8h}{clientmanager.\+h}}\item 
+\mbox{\hyperlink{clientmanager_8cpp}{clientmanager.\+cpp}}\end{DoxyCompactItemize}

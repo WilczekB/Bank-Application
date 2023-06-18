@@ -1,0 +1,34 @@
+\doxysection{creditcalculator.\+h}
+\hypertarget{creditcalculator_8h_source}{}\label{creditcalculator_8h_source}\mbox{\hyperlink{creditcalculator_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ CREDITCALCULATOR\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ CREDITCALCULATOR\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{credit_8h}{credit.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{calculator_8h}{calculator.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <iomanip>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_credit}{Credit}};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_credit_calculator}{CreditCalculator}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_calculator}{Calculator}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ klasy\ Credit}}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_credit}{Credit}}*\ credit\_;}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//Konstruktor}}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_credit_calculator}{CreditCalculator}}(\mbox{\hyperlink{class_credit}{Credit}}*\ credit);}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//Destruktor}}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_credit_calculator_a662f1daa4db150da0620913de8ce33eb}{\string~CreditCalculator}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//Funkcja\ do\ tworzenia\ harmonogramu\ spłaty\ kredytu}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_credit_calculator_a0bb998141ee6015a3715560b37d38e38}{calculate}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00027\ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CREDITCALCULATOR\_H}}
+
+\end{DoxyCode}

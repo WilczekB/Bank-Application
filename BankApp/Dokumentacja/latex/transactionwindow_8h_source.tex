@@ -1,0 +1,52 @@
+\doxysection{transactionwindow.\+h}
+\hypertarget{transactionwindow_8h_source}{}\label{transactionwindow_8h_source}\mbox{\hyperlink{transactionwindow_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TRANSACTIONWINDOW\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TRANSACTIONWINDOW\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QDialog>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{accountmanager_8h}{accountmanager.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{client_8h}{client.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QMessageBox>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_transaction_window}{TransactionWindow}};}
+\DoxyCodeLine{00011\ \}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_transaction_window}{TransactionWindow}}\ :\ \textcolor{keyword}{public}\ QDialog}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//Konstruktor}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//@param\ parent\ wskaźnik\ do\ obiektu\ bazowego}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//@param\ accountManager\ wskaźnik\ na\ obiekt\ klasy\ AccountManager}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//@param\ account\ wskaźnik\ na\ obiekt\ klasy\ BankAccount}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//@param\ client\ wskaźnik\ na\ obiekt\ klasy\ Client}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_transaction_window}{TransactionWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr},\ \mbox{\hyperlink{class_account_manager}{AccountManager}}\ *accountManager\ =\ \textcolor{keyword}{nullptr},\ \mbox{\hyperlink{class_bank_account}{BankAccount}}\ *account\ =\ \textcolor{keyword}{nullptr},\ \mbox{\hyperlink{class_client}{Client}}\ *client\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//Destruktor}}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_transaction_window_a8df3ccc776d9a573378eaa826e0db406}{\string~TransactionWindow}}();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//Slot\ realizujący\ wysłanie\ transakcji}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_sendButton\_clicked();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//Slot\ realizujący\ zamknięcie\ interfesju\ TransactionWindow}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_gobackButton\_clicked();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//Funkcja\ ustawiająca\ wybrane\ konto\ bankowe\ do\ transferu}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ setAccounts();}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ reprezentujący\ interfejs\ użytkownika\ UI}}
+\DoxyCodeLine{00038\ \ \ \ \ Ui::TransactionWindow\ *ui;}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ klasy\ AccountManager}}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{class_account_manager}{AccountManager}}*\ accountManager\_;}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ klasy\ BankAccount}}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{class_bank_account}{BankAccount}}\ *account\_;}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ klasy\ Client}}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_client}{Client}}\ *client\_;}
+\DoxyCodeLine{00045\ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ TRANSACTIONWINDOW\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,30 @@
+\doxysection{interestcalculator.\+h}
+\hypertarget{interestcalculator_8h_source}{}\label{interestcalculator_8h_source}\mbox{\hyperlink{interestcalculator_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ INTERESTCALCULATOR\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ INTERESTCALCULATOR\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{savingsaccount_8h}{savingsaccount.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{calculator_8h}{calculator.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_savings_account}{SavingsAccount}};}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_interest_calculator}{InterestCalculator}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_calculator}{Calculator}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ klasy\ SavingsAccount}}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_savings_account}{SavingsAccount}}*\ account;}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//Konstruktor}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//@param\ savingAccount\ wskaźnik\ na\ obiekt\ klasy\ SavingsAccount}}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_interest_calculator}{InterestCalculator}}(\mbox{\hyperlink{class_savings_account}{SavingsAccount}}*\ savingAccount);}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//Destruktor}}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_interest_calculator_a020587e86513c7a9fa2af7ce1604e67a}{\string~InterestCalculator}}();}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//Funkcja\ wyliczająca\ odsetki}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_interest_calculator_ae24bffea383f65c90074a0003272487b}{calculate}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ INTERESTCALCULATOR\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,196 @@
+\doxysection{Transaction Class Reference}
+\hypertarget{class_transaction}{}\label{class_transaction}\index{Transaction@{Transaction}}
+
+
+{\ttfamily \#include $<$transaction.\+h$>$}
+
+Inheritance diagram for Transaction\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_transaction}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_transaction_a38af48f6cb4634107677b21e8711883a}{Transaction}} (double amount, const std\+::string \&reciver, const std\+::string \&sender\+Account\+Number, const std\+::string \&title)
+\item 
+virtual \mbox{\hyperlink{class_transaction_a362b0d2524d0c799165190517192dca9}{\texorpdfstring{$\sim$}{\string~}\+Transaction}} ()
+\item 
+double \mbox{\hyperlink{class_transaction_a82032f30ae2c62aaf5b911994f844a31}{get\+Amount}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{class_transaction_ade0800e40c2ca358a1d2d07eeeb8dfca}{get\+Sender}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{class_transaction_aac186e6ecb3b8849fb4e0f468bfb53a7}{get\+Reciver}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{class_transaction_a6c1cc9ab5ac36b2816d0ee9d6b6fb15c}{get\+Reciver\+Acc\+Number}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{class_transaction_a9ed1f21f5c146e5e40eca9f95162e95b}{get\+Sender\+Acc\+Number}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{class_transaction_a17c995051b4ba792609c69241977ddb4}{get\+Title}} () const
+\item 
+int \mbox{\hyperlink{class_transaction_ab55ac6a24f28e692fb13c4b705669cb0}{get\+Id}} () const
+\item 
+virtual std\+::string \mbox{\hyperlink{class_transaction_a1df758888fad2b6f36495d940a664bbc}{get\+Type}} () const =0
+\item 
+virtual std\+::string \mbox{\hyperlink{class_transaction_a65fb126f19d6a05abed371cda0d78924}{get\+Info}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_transaction_abf9e364667d423ab40172d336ff6aa7c}{amount\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{class_transaction_a17eabcab1a5a4ee3cb969907292ccee1}{sender\+\_\+acc\+\_\+number\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{class_transaction_ab27dc1dc81d85a195e08ac4cb2394415}{reciver\+\_\+acc\+\_\+number\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{class_transaction_a1b2398f3721aa176b09b34c6ea5b2a40}{title\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{class_transaction_ad32c29d07497e99c3ce3d7bb9887f17c}{reciver\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{class_transaction_abdf12a7f28a41e98ca0f3ac14533d6ee}{sender\+\_\+}}
+\item 
+int \mbox{\hyperlink{class_transaction_a8e43580c2afbd59f46bafbd7dccb2ad0}{id}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_transaction_a99974a9f56a83095cd6de8d61ccfe04a}{id\+Counter}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_transaction_a38af48f6cb4634107677b21e8711883a}\label{class_transaction_a38af48f6cb4634107677b21e8711883a} 
+\index{Transaction@{Transaction}!Transaction@{Transaction}}
+\index{Transaction@{Transaction}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{Transaction()}{Transaction()}}
+{\footnotesize\ttfamily Transaction\+::\+Transaction (\begin{DoxyParamCaption}\item[{double}]{amount,  }\item[{const std\+::string \&}]{reciver,  }\item[{const std\+::string \&}]{sender\+Account\+Number,  }\item[{const std\+::string \&}]{title }\end{DoxyParamCaption})}
+
+\Hypertarget{class_transaction_a362b0d2524d0c799165190517192dca9}\label{class_transaction_a362b0d2524d0c799165190517192dca9} 
+\index{Transaction@{Transaction}!````~Transaction@{\texorpdfstring{$\sim$}{\string~}Transaction}}
+\index{````~Transaction@{\texorpdfstring{$\sim$}{\string~}Transaction}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Transaction()}{\string~Transaction()}}
+{\footnotesize\ttfamily Transaction\+::\texorpdfstring{$\sim$}{\string~}\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_transaction_a82032f30ae2c62aaf5b911994f844a31}\label{class_transaction_a82032f30ae2c62aaf5b911994f844a31} 
+\index{Transaction@{Transaction}!getAmount@{getAmount}}
+\index{getAmount@{getAmount}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{getAmount()}{getAmount()}}
+{\footnotesize\ttfamily double Transaction\+::get\+Amount (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_transaction_ab55ac6a24f28e692fb13c4b705669cb0}\label{class_transaction_ab55ac6a24f28e692fb13c4b705669cb0} 
+\index{Transaction@{Transaction}!getId@{getId}}
+\index{getId@{getId}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int Transaction\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_transaction_a65fb126f19d6a05abed371cda0d78924}\label{class_transaction_a65fb126f19d6a05abed371cda0d78924} 
+\index{Transaction@{Transaction}!getInfo@{getInfo}}
+\index{getInfo@{getInfo}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{getInfo()}{getInfo()}}
+{\footnotesize\ttfamily std\+::string Transaction\+::get\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_in_transaction_ae995188e523c39c9c627725d1e4a183f}{In\+Transaction}}, and \mbox{\hyperlink{class_out_transaction_ab597bc33b298ef29de1259f02a5e4d0e}{Out\+Transaction}}.
+
+\Hypertarget{class_transaction_aac186e6ecb3b8849fb4e0f468bfb53a7}\label{class_transaction_aac186e6ecb3b8849fb4e0f468bfb53a7} 
+\index{Transaction@{Transaction}!getReciver@{getReciver}}
+\index{getReciver@{getReciver}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{getReciver()}{getReciver()}}
+{\footnotesize\ttfamily const std\+::string \& Transaction\+::get\+Reciver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_transaction_a6c1cc9ab5ac36b2816d0ee9d6b6fb15c}\label{class_transaction_a6c1cc9ab5ac36b2816d0ee9d6b6fb15c} 
+\index{Transaction@{Transaction}!getReciverAccNumber@{getReciverAccNumber}}
+\index{getReciverAccNumber@{getReciverAccNumber}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{getReciverAccNumber()}{getReciverAccNumber()}}
+{\footnotesize\ttfamily const std\+::string \& Transaction\+::get\+Reciver\+Acc\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_transaction_ade0800e40c2ca358a1d2d07eeeb8dfca}\label{class_transaction_ade0800e40c2ca358a1d2d07eeeb8dfca} 
+\index{Transaction@{Transaction}!getSender@{getSender}}
+\index{getSender@{getSender}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{getSender()}{getSender()}}
+{\footnotesize\ttfamily const std\+::string \& Transaction\+::get\+Sender (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_transaction_a9ed1f21f5c146e5e40eca9f95162e95b}\label{class_transaction_a9ed1f21f5c146e5e40eca9f95162e95b} 
+\index{Transaction@{Transaction}!getSenderAccNumber@{getSenderAccNumber}}
+\index{getSenderAccNumber@{getSenderAccNumber}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{getSenderAccNumber()}{getSenderAccNumber()}}
+{\footnotesize\ttfamily const std\+::string \& Transaction\+::get\+Sender\+Acc\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_transaction_a17c995051b4ba792609c69241977ddb4}\label{class_transaction_a17c995051b4ba792609c69241977ddb4} 
+\index{Transaction@{Transaction}!getTitle@{getTitle}}
+\index{getTitle@{getTitle}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{getTitle()}{getTitle()}}
+{\footnotesize\ttfamily const std\+::string \& Transaction\+::get\+Title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_transaction_a1df758888fad2b6f36495d940a664bbc}\label{class_transaction_a1df758888fad2b6f36495d940a664bbc} 
+\index{Transaction@{Transaction}!getType@{getType}}
+\index{getType@{getType}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily virtual std\+::string Transaction\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_in_transaction_af923151ef10d7e61b04f1db807935692}{In\+Transaction}}, and \mbox{\hyperlink{class_out_transaction_a6c3ca71b5638568c10bea12dae7378a7}{Out\+Transaction}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_transaction_abf9e364667d423ab40172d336ff6aa7c}\label{class_transaction_abf9e364667d423ab40172d336ff6aa7c} 
+\index{Transaction@{Transaction}!amount\_@{amount\_}}
+\index{amount\_@{amount\_}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{amount\_}{amount\_}}
+{\footnotesize\ttfamily double Transaction\+::amount\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_transaction_a8e43580c2afbd59f46bafbd7dccb2ad0}\label{class_transaction_a8e43580c2afbd59f46bafbd7dccb2ad0} 
+\index{Transaction@{Transaction}!id@{id}}
+\index{id@{id}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int Transaction\+::id\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_transaction_a99974a9f56a83095cd6de8d61ccfe04a}\label{class_transaction_a99974a9f56a83095cd6de8d61ccfe04a} 
+\index{Transaction@{Transaction}!idCounter@{idCounter}}
+\index{idCounter@{idCounter}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{idCounter}{idCounter}}
+{\footnotesize\ttfamily int Transaction\+::id\+Counter = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_transaction_ad32c29d07497e99c3ce3d7bb9887f17c}\label{class_transaction_ad32c29d07497e99c3ce3d7bb9887f17c} 
+\index{Transaction@{Transaction}!reciver\_@{reciver\_}}
+\index{reciver\_@{reciver\_}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{reciver\_}{reciver\_}}
+{\footnotesize\ttfamily std\+::string Transaction\+::reciver\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_transaction_ab27dc1dc81d85a195e08ac4cb2394415}\label{class_transaction_ab27dc1dc81d85a195e08ac4cb2394415} 
+\index{Transaction@{Transaction}!reciver\_acc\_number\_@{reciver\_acc\_number\_}}
+\index{reciver\_acc\_number\_@{reciver\_acc\_number\_}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{reciver\_acc\_number\_}{reciver\_acc\_number\_}}
+{\footnotesize\ttfamily std\+::string Transaction\+::reciver\+\_\+acc\+\_\+number\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_transaction_abdf12a7f28a41e98ca0f3ac14533d6ee}\label{class_transaction_abdf12a7f28a41e98ca0f3ac14533d6ee} 
+\index{Transaction@{Transaction}!sender\_@{sender\_}}
+\index{sender\_@{sender\_}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{sender\_}{sender\_}}
+{\footnotesize\ttfamily std\+::string Transaction\+::sender\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_transaction_a17eabcab1a5a4ee3cb969907292ccee1}\label{class_transaction_a17eabcab1a5a4ee3cb969907292ccee1} 
+\index{Transaction@{Transaction}!sender\_acc\_number\_@{sender\_acc\_number\_}}
+\index{sender\_acc\_number\_@{sender\_acc\_number\_}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{sender\_acc\_number\_}{sender\_acc\_number\_}}
+{\footnotesize\ttfamily std\+::string Transaction\+::sender\+\_\+acc\+\_\+number\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_transaction_a1b2398f3721aa176b09b34c6ea5b2a40}\label{class_transaction_a1b2398f3721aa176b09b34c6ea5b2a40} 
+\index{Transaction@{Transaction}!title\_@{title\_}}
+\index{title\_@{title\_}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{title\_}{title\_}}
+{\footnotesize\ttfamily std\+::string Transaction\+::title\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{transaction_8h}{transaction.\+h}}\item 
+\mbox{\hyperlink{transaction_8cpp}{transaction.\+cpp}}\end{DoxyCompactItemize}

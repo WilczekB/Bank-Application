@@ -1,0 +1,54 @@
+\doxysection{creditcalculatorwindow.\+h}
+\hypertarget{creditcalculatorwindow_8h_source}{}\label{creditcalculatorwindow_8h_source}\mbox{\hyperlink{creditcalculatorwindow_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CREDITCALCULATORWINDOW\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CREDITCALCULATORWINDOW\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QDialog>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{credit_8h}{credit.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{creditcalculator_8h}{creditcalculator.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{client_8h}{client.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{accountmanager_8h}{accountmanager.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcredit_calculator_window}{creditCalculatorWindow}};}
+\DoxyCodeLine{00012\ \}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcredit_calculator_window}{creditCalculatorWindow}}\ :\ \textcolor{keyword}{public}\ QDialog}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//Konstruktor}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//@param\ parent\ wskaźnik\ do\ obiektu\ bazowego}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//@param\ client\ wskaźnik\ do\ obiekut\ klasy\ Client}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classcredit_calculator_window}{creditCalculatorWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr},\ \mbox{\hyperlink{class_client}{Client}}*\ client\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//Destruktor}}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{classcredit_calculator_window_a37a6b0c0741e9e0cdcb9b49d0a5804cc}{\string~creditCalculatorWindow}}();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//Slot\ do\ wyczyszczenia\ pól\ tekstowych\ z\ danych}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_clearButton\_clicked();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//Slot\ do\ wygenerowania\ harmonogramu\ spłaty\ kredytu}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_generateScheduleButton\_clicked();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//Slot\ do\ wyjścia\ z\ interfejsu}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//Po\ wciśnięciu\ przycisku\ goBackButton\ zamykany\ jest\ interfejs\ creditcalculatorwindow}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_gobackButton\_clicked();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//Funkcja\ która\ czyści\ pola\ tekstowe\ z\ danych}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ clear();}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ reprezentujący\ interfejs\ użytkownika\ UI}}
+\DoxyCodeLine{00042\ \ \ \ \ Ui::creditCalculatorWindow\ *ui;}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ Client,\ który\ reprezentuje\ klienta}}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_client}{Client}}\ *client\_;}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ AccountManager,\ który\ zarządza\ kontami}}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{class_account_manager}{AccountManager}}\ *accManager;}
+\DoxyCodeLine{00047\ \};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CREDITCALCULATORWINDOW\_H}}
+
+\end{DoxyCode}

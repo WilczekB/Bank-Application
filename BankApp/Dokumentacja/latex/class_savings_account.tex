@@ -1,0 +1,186 @@
+\doxysection{Savings\+Account Class Reference}
+\hypertarget{class_savings_account}{}\label{class_savings_account}\index{SavingsAccount@{SavingsAccount}}
+
+
+{\ttfamily \#include $<$savingsaccount.\+h$>$}
+
+Inheritance diagram for Savings\+Account\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_savings_account}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_savings_account_a6573639776673e9ccb4c4f8c8f060f77}{Savings\+Account}} (std\+::string account\+\_\+number, double balance, double interest\+\_\+rate\+\_\+, int withdrawal\+\_\+limit\+\_\+, std\+::string owner\+Pesel)
+\item 
+\mbox{\hyperlink{class_savings_account_a80d8c75090654645a457ca9e9daf2974}{\texorpdfstring{$\sim$}{\string~}\+Savings\+Account}} ()
+\item 
+void \mbox{\hyperlink{class_savings_account_abcd33b93e9aa23b3015026b6ec8ff11b}{set\+Withdrawal\+Limit}} (int withdrawal\+\_\+limit)
+\item 
+void \mbox{\hyperlink{class_savings_account_aa2e3c595e1664349fbe7e2b150aafb59}{set\+Interest\+Rate}} (double interest\+\_\+rate)
+\item 
+double \mbox{\hyperlink{class_savings_account_a4ac43373a6e972af24f38a9e68ab4ede}{get\+Interest\+Rate}} () const
+\item 
+int \mbox{\hyperlink{class_savings_account_a0eba91948dda7b8a57d96575a58fef91}{get\+Withdrawal\+Limit}} () const
+\item 
+void \mbox{\hyperlink{class_savings_account_a9909b3c1028c34bc49c0a934ab9a3855}{deposit}} (double amount)
+\item 
+bool \mbox{\hyperlink{class_savings_account_aa4fe5437e16563eef2814875822dfc0f}{withdraw}} (double amount)
+\item 
+std\+::string \mbox{\hyperlink{class_savings_account_ae887822fd175e6977982beaec812ecd1}{get\+Type}} () const
+\item 
+void \mbox{\hyperlink{class_savings_account_afaf7e542538b977f593bab4421a6166e}{set\+Type}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_bank_account}{Bank\+Account}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bank_account_aea76f19fafd3cdbd6f15bf9d5b141412}{Bank\+Account}} (std\+::string account\+\_\+number, double balance, bool is\+Active, std\+::string owner\+Pesel, std\+::string type)
+\item 
+virtual \mbox{\hyperlink{class_bank_account_af8ff84fe814689a9a6e74c5ae36761d8}{\texorpdfstring{$\sim$}{\string~}\+Bank\+Account}} ()
+\item 
+void \mbox{\hyperlink{class_bank_account_ae9bffacb31429799552b9aadd9c02544}{set\+Is\+Active}} (bool is\+Acitve)
+\item 
+void \mbox{\hyperlink{class_bank_account_a691745d227fdc391c1edfc72906d3a0b}{set\+Balance}} (double balance)
+\item 
+void \mbox{\hyperlink{class_bank_account_a5717f4186e38af1a7677b49683d1616d}{set\+Calculator}} (\mbox{\hyperlink{class_calculator}{Calculator}} \texorpdfstring{$\ast$}{*}calculator)
+\item 
+void \mbox{\hyperlink{class_bank_account_aa69292f134492a301e20d3d9dee294a7}{set\+Account\+Number}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_bank_account_a3af00dc7b6a2e56d4f64984c780a7ae0}{get\+Account\+Number}} () const
+\item 
+bool \mbox{\hyperlink{class_bank_account_a383c1a29063284e78ab6584845fdc03d}{get\+Is\+Active}} () const
+\item 
+double \mbox{\hyperlink{class_bank_account_aeb202a68eff290686b9926ad386293be}{get\+Balance}} () const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_transaction}{Transaction}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_bank_account_aa460e1f94e53945a79a33e7f6771e9d5}{get\+Transactions}} () const
+\item 
+\mbox{\hyperlink{class_client}{Client}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_bank_account_a4df5528233f4f67be96d4e6bfbc715b4}{get\+Owner}} () const
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_bank_account_ad81b7f18aa5cbc3733821eb8a47c33ea}{get\+Transactions\+Id}} () const
+\item 
+std\+::string \mbox{\hyperlink{class_bank_account_a3336abb2fb385cb827c6bf0e9c71413c}{get\+Owner\+ID}} () const
+\item 
+\mbox{\hyperlink{class_calculator}{Calculator}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_bank_account_a80611fa0eddca23c0ea7cd2945daaede}{get\+Calculator}} () const
+\item 
+QString \mbox{\hyperlink{class_bank_account_ab723d7b42cd8346f5827edb26656823a}{show\+Transactions}} () const
+\item 
+virtual void \mbox{\hyperlink{class_bank_account_a323a2a33c5285eb44ad046d52f42bfcd}{add\+Transaction}} (\mbox{\hyperlink{class_transaction}{Transaction}} \texorpdfstring{$\ast$}{*}transaction)
+\item 
+virtual bool \mbox{\hyperlink{class_bank_account_aca81074540421d8f9c9dfa1f5e2ba783}{withdraw}} (double amount)=0
+\item 
+virtual std\+::string \mbox{\hyperlink{class_bank_account_a921000191c6e5ac5bb09e00f60f3b2cd}{get\+Type}} () const =0
+\item 
+virtual void \mbox{\hyperlink{class_bank_account_aef3866fc8f6a284a20e34689cb3f3938}{set\+Type}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_bank_account_a9c073d1e16037e07babcd4f503309943}{deposit}} (double amount)=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_bank_account}{Bank\+Account}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_bank_account_a70f9ce1361dd6ef6a6ef4a93af22cfd4}{account\+\_\+number\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_bank_account_aaa6ec014153c673bcb900d980c80119d}{balance\+\_\+}}
+\item 
+bool \mbox{\hyperlink{class_bank_account_a9d877c76c31386d94d8aecbfb8d6b29f}{is\+Active\+\_\+}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_transaction}{Transaction}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_bank_account_a3648ef99842cd5d451034a1dc6c57212}{transactions}}
+\item 
+std\+::string \mbox{\hyperlink{class_bank_account_a1bbe0a8cdc6ab99b5043fe46056117aa}{type\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{class_bank_account_a36508bb4b8a5f99baab470a500dc6f23}{owner\+ID}}
+\item 
+\mbox{\hyperlink{class_calculator}{Calculator}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_bank_account_ad61b3cbccabb2351a1e3c4fcdf4e6d95}{calculator\+\_\+}}
+\item 
+\mbox{\hyperlink{class_client}{Client}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_bank_account_a8e49bf47b3b963d88373fa042dd1dbc8}{owner}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_savings_account_a6573639776673e9ccb4c4f8c8f060f77}\label{class_savings_account_a6573639776673e9ccb4c4f8c8f060f77} 
+\index{SavingsAccount@{SavingsAccount}!SavingsAccount@{SavingsAccount}}
+\index{SavingsAccount@{SavingsAccount}!SavingsAccount@{SavingsAccount}}
+\doxysubsubsection{\texorpdfstring{SavingsAccount()}{SavingsAccount()}}
+{\footnotesize\ttfamily Savings\+Account\+::\+Savings\+Account (\begin{DoxyParamCaption}\item[{std\+::string}]{account\+\_\+number,  }\item[{double}]{balance,  }\item[{double}]{interest\+\_\+rate\+\_\+,  }\item[{int}]{withdrawal\+\_\+limit\+\_\+,  }\item[{std\+::string}]{owner\+Pesel }\end{DoxyParamCaption})}
+
+\Hypertarget{class_savings_account_a80d8c75090654645a457ca9e9daf2974}\label{class_savings_account_a80d8c75090654645a457ca9e9daf2974} 
+\index{SavingsAccount@{SavingsAccount}!````~SavingsAccount@{\texorpdfstring{$\sim$}{\string~}SavingsAccount}}
+\index{````~SavingsAccount@{\texorpdfstring{$\sim$}{\string~}SavingsAccount}!SavingsAccount@{SavingsAccount}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SavingsAccount()}{\string~SavingsAccount()}}
+{\footnotesize\ttfamily Savings\+Account\+::\texorpdfstring{$\sim$}{\string~}\+Savings\+Account (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_savings_account_a9909b3c1028c34bc49c0a934ab9a3855}\label{class_savings_account_a9909b3c1028c34bc49c0a934ab9a3855} 
+\index{SavingsAccount@{SavingsAccount}!deposit@{deposit}}
+\index{deposit@{deposit}!SavingsAccount@{SavingsAccount}}
+\doxysubsubsection{\texorpdfstring{deposit()}{deposit()}}
+{\footnotesize\ttfamily void Savings\+Account\+::deposit (\begin{DoxyParamCaption}\item[{double}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_bank_account_a9c073d1e16037e07babcd4f503309943}{Bank\+Account}}.
+
+\Hypertarget{class_savings_account_a4ac43373a6e972af24f38a9e68ab4ede}\label{class_savings_account_a4ac43373a6e972af24f38a9e68ab4ede} 
+\index{SavingsAccount@{SavingsAccount}!getInterestRate@{getInterestRate}}
+\index{getInterestRate@{getInterestRate}!SavingsAccount@{SavingsAccount}}
+\doxysubsubsection{\texorpdfstring{getInterestRate()}{getInterestRate()}}
+{\footnotesize\ttfamily double Savings\+Account\+::get\+Interest\+Rate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_savings_account_ae887822fd175e6977982beaec812ecd1}\label{class_savings_account_ae887822fd175e6977982beaec812ecd1} 
+\index{SavingsAccount@{SavingsAccount}!getType@{getType}}
+\index{getType@{getType}!SavingsAccount@{SavingsAccount}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily std\+::string Savings\+Account\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_bank_account_a921000191c6e5ac5bb09e00f60f3b2cd}{Bank\+Account}}.
+
+\Hypertarget{class_savings_account_a0eba91948dda7b8a57d96575a58fef91}\label{class_savings_account_a0eba91948dda7b8a57d96575a58fef91} 
+\index{SavingsAccount@{SavingsAccount}!getWithdrawalLimit@{getWithdrawalLimit}}
+\index{getWithdrawalLimit@{getWithdrawalLimit}!SavingsAccount@{SavingsAccount}}
+\doxysubsubsection{\texorpdfstring{getWithdrawalLimit()}{getWithdrawalLimit()}}
+{\footnotesize\ttfamily int Savings\+Account\+::get\+Withdrawal\+Limit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_savings_account_aa2e3c595e1664349fbe7e2b150aafb59}\label{class_savings_account_aa2e3c595e1664349fbe7e2b150aafb59} 
+\index{SavingsAccount@{SavingsAccount}!setInterestRate@{setInterestRate}}
+\index{setInterestRate@{setInterestRate}!SavingsAccount@{SavingsAccount}}
+\doxysubsubsection{\texorpdfstring{setInterestRate()}{setInterestRate()}}
+{\footnotesize\ttfamily void Savings\+Account\+::set\+Interest\+Rate (\begin{DoxyParamCaption}\item[{double}]{interest\+\_\+rate }\end{DoxyParamCaption})}
+
+\Hypertarget{class_savings_account_afaf7e542538b977f593bab4421a6166e}\label{class_savings_account_afaf7e542538b977f593bab4421a6166e} 
+\index{SavingsAccount@{SavingsAccount}!setType@{setType}}
+\index{setType@{setType}!SavingsAccount@{SavingsAccount}}
+\doxysubsubsection{\texorpdfstring{setType()}{setType()}}
+{\footnotesize\ttfamily void Savings\+Account\+::set\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_bank_account_aef3866fc8f6a284a20e34689cb3f3938}{Bank\+Account}}.
+
+\Hypertarget{class_savings_account_abcd33b93e9aa23b3015026b6ec8ff11b}\label{class_savings_account_abcd33b93e9aa23b3015026b6ec8ff11b} 
+\index{SavingsAccount@{SavingsAccount}!setWithdrawalLimit@{setWithdrawalLimit}}
+\index{setWithdrawalLimit@{setWithdrawalLimit}!SavingsAccount@{SavingsAccount}}
+\doxysubsubsection{\texorpdfstring{setWithdrawalLimit()}{setWithdrawalLimit()}}
+{\footnotesize\ttfamily void Savings\+Account\+::set\+Withdrawal\+Limit (\begin{DoxyParamCaption}\item[{int}]{withdrawal\+\_\+limit }\end{DoxyParamCaption})}
+
+\Hypertarget{class_savings_account_aa4fe5437e16563eef2814875822dfc0f}\label{class_savings_account_aa4fe5437e16563eef2814875822dfc0f} 
+\index{SavingsAccount@{SavingsAccount}!withdraw@{withdraw}}
+\index{withdraw@{withdraw}!SavingsAccount@{SavingsAccount}}
+\doxysubsubsection{\texorpdfstring{withdraw()}{withdraw()}}
+{\footnotesize\ttfamily bool Savings\+Account\+::withdraw (\begin{DoxyParamCaption}\item[{double}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_bank_account_aca81074540421d8f9c9dfa1f5e2ba783}{Bank\+Account}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{savingsaccount_8h}{savingsaccount.\+h}}\item 
+\mbox{\hyperlink{savingsaccount_8cpp}{savingsaccount.\+cpp}}\end{DoxyCompactItemize}

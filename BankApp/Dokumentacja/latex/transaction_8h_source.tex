@@ -1,0 +1,66 @@
+\doxysection{transaction.\+h}
+\hypertarget{transaction_8h_source}{}\label{transaction_8h_source}\mbox{\hyperlink{transaction_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ TRANSACTION\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ TRANSACTION\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\#include\ "{}client.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\#include\ "{}intransaction.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\#include\ "{}outtransaction.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_transaction}{Transaction}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{//Pole\ przechowujące\ wartość\ transakcji}}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_transaction_abf9e364667d423ab40172d336ff6aa7c}{amount\_}};}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//Pole\ przechowujące\ numer\ konta\ nadawcy}}
+\DoxyCodeLine{00017\ \ \ \ \ std::string\ \mbox{\hyperlink{class_transaction_a17eabcab1a5a4ee3cb969907292ccee1}{sender\_acc\_number\_}};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//Pole\ przechowujące\ numer\ konta\ odbiorcy}}
+\DoxyCodeLine{00019\ \ \ \ \ std::string\ \mbox{\hyperlink{class_transaction_ab27dc1dc81d85a195e08ac4cb2394415}{reciver\_acc\_number\_}};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//Pole\ przechowujące\ tytuł\ transakcji}}
+\DoxyCodeLine{00021\ \ \ \ \ std::string\ \mbox{\hyperlink{class_transaction_a1b2398f3721aa176b09b34c6ea5b2a40}{title\_}};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//Pole\ przechowujące\ imie\ i\ nazwisko\ odbiorcy}}
+\DoxyCodeLine{00023\ \ \ \ \ std::string\ \mbox{\hyperlink{class_transaction_ad32c29d07497e99c3ce3d7bb9887f17c}{reciver\_}};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//Pole\ przechowujące\ imie\ i\ nazwisko\ nadawcy}}
+\DoxyCodeLine{00025\ \ \ \ \ std::string\ \mbox{\hyperlink{class_transaction_abdf12a7f28a41e98ca0f3ac14533d6ee}{sender\_}};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//Pole\ przechowujące\ id\ transakcji}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_transaction_a8e43580c2afbd59f46bafbd7dccb2ad0}{id}};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//Statyczne\ pole\ przechowujące\ ogólną\ ilość\ transakcji\ na\ koncie}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_transaction_a99974a9f56a83095cd6de8d61ccfe04a}{idCounter}};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//Konstruktor}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//@param\ amount\ przechowuje\ kwotę\ transakcji}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//@param\ reciver\ przechowuje\ imie\ i\ nazwisko\ odbiorcy\ transakcji}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//@param\ senderAccountNumber\ przechowuje\ numer\ konta\ nadawcy\ transakcji}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//@param\ title\ przechowuje\ tytuł\ transakcji}}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_transaction}{Transaction}}(\textcolor{keywordtype}{double}\ amount,\ \textcolor{keyword}{const}\ std::string\&\ reciver,\ \textcolor{keyword}{const}\ std::string\&\ senderAccountNumber,}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ title);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//Wirtualny\ destruktor}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_transaction_a362b0d2524d0c799165190517192dca9}{\string~Transaction}}();}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ wartość\ pola\ amount\_}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_transaction_a82032f30ae2c62aaf5b911994f844a31}{getAmount}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ wartość\ sender\_}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_transaction_ade0800e40c2ca358a1d2d07eeeb8dfca}{getSender}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ wartośc\ pola\ reciver\_}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_transaction_aac186e6ecb3b8849fb4e0f468bfb53a7}{getReciver}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ wartość\ pola\ reciver\_acc\_number\_}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_transaction_a6c1cc9ab5ac36b2816d0ee9d6b6fb15c}{getReciverAccNumber}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ wartość\ pola\ sender\_acc\_number\_}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_transaction_a9ed1f21f5c146e5e40eca9f95162e95b}{getSenderAccNumber}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ wartość\ pola\ title\_}}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_transaction_a17c995051b4ba792609c69241977ddb4}{getTitle}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ wartość\ pola\ id}}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_transaction_ab55ac6a24f28e692fb13c4b705669cb0}{getId}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//Wirtualna\ funkcja\ zwracająca\ typ\ transakcji}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{class_transaction_a1df758888fad2b6f36495d940a664bbc}{getType}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{//Wirtualna\ funkcja\ zwracająca\ informacje\ o\ transakcji}}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{class_transaction_a65fb126f19d6a05abed371cda0d78924}{getInfo}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ \};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ TRANSACTION\_H}}
+
+\end{DoxyCode}

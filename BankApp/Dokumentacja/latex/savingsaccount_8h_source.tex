@@ -1,0 +1,57 @@
+\doxysection{savingsaccount.\+h}
+\hypertarget{savingsaccount_8h_source}{}\label{savingsaccount_8h_source}\mbox{\hyperlink{savingsaccount_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ SAVINGSACCOUNT\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ SAVINGSACCOUNT\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{bankaccount_8h}{bankaccount.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{client_8h}{client.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bank_account}{BankAccount}};}
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_client}{Client}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_savings_account}{SavingsAccount}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_bank_account}{BankAccount}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{//Pole\ przechowujące\ wartość\ odsetek}}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{double}\ interest\_rate;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//Pole\ przechowujące\ limit\ wypłat\ bez\ opłaty}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ withdrawal\_limit;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//Statyczne\ pole\ przechowujące\ ilość\ zrealizowanych\ transakcji}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ withdrawal\_counter;}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//Konstruktor}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//@param\ account\_number\ przechowuje\ numer\ konta\ oszczędnościowego}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//@param\ balance\ przechowuje\ wartość\ salda\ konta}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//@param\ interest\_rate\_\ przechowuje\ wartość\ odsetek}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//@param\ withdrawal\_limit\_\ przechowuje\ wartość\ limitu\ transakcji}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//@param\ ownerPesel\ przechowuje\ numer\ pesel\ właściciela\ konta}}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_savings_account}{SavingsAccount}}(std::string\ account\_number,\ \textcolor{keywordtype}{double}\ balance,\ \textcolor{keywordtype}{double}\ interest\_rate\_,\ \textcolor{keywordtype}{int}\ withdrawal\_limit\_,\ std::string\ ownerPesel);}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//Destruktor}}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_savings_account_a80d8c75090654645a457ca9e9daf2974}{\string~SavingsAccount}}();}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//Funkcja\ ustawiająca\ wartość\ pola\ withdrawal\_limit}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//@param\ withdrawal\_limit\_\ przechowuje\ wartość\ limitu\ transakcji}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_savings_account_abcd33b93e9aa23b3015026b6ec8ff11b}{setWithdrawalLimit}}(\textcolor{keywordtype}{int}\ withdrawal\_limit);}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//Funkcja\ ustawiająca\ wartość\ pola\ interest\_rate}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//@param\ interest\_rate\_\ przechowuje\ wartość\ odsetek}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_savings_account_aa2e3c595e1664349fbe7e2b150aafb59}{setInterestRate}}(\textcolor{keywordtype}{double}\ interest\_rate);}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ wartość\ pola\ interest\_rate}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_savings_account_a4ac43373a6e972af24f38a9e68ab4ede}{getInterestRate}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ wartość\ pola\ withdrawal\_limit}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_savings_account_a0eba91948dda7b8a57d96575a58fef91}{getWithdrawalLimit}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//Funkcja\ realizująca\ wpłacanie\ środków\ na\ konto}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//@param\ amount\ przechowuje\ kwotę\ do\ wpłaty}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_savings_account_a9909b3c1028c34bc49c0a934ab9a3855}{deposit}}(\textcolor{keywordtype}{double}\ amount);}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//Funkcja\ realizująca\ wypłacanie\ środków\ z\ konta}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//@param\ amount\ przechowuje\ kwotę\ do\ wypłaty}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_savings_account_aa4fe5437e16563eef2814875822dfc0f}{withdraw}}(\textcolor{keywordtype}{double}\ amount);}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ typ\ konta}}
+\DoxyCodeLine{00047\ \ \ \ \ std::string\ \mbox{\hyperlink{class_savings_account_ae887822fd175e6977982beaec812ecd1}{getType}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//Funkcja\ ustawiająca\ typ\ konta}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_savings_account_afaf7e542538b977f593bab4421a6166e}{setType}}();}
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SAVINGSACCOUNT\_H}}
+
+\end{DoxyCode}

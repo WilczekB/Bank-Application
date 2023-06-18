@@ -1,0 +1,45 @@
+\doxysection{newaccountwindow.\+h}
+\hypertarget{newaccountwindow_8h_source}{}\label{newaccountwindow_8h_source}\mbox{\hyperlink{newaccountwindow_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ NEWACCOUNTWINDOW\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ NEWACCOUNTWINDOW\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QDialog>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{client_8h}{client.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{accountmanager_8h}{accountmanager.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_new_account_window}{NewAccountWindow}};}
+\DoxyCodeLine{00010\ \}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_new_account_window}{NewAccountWindow}}\ :\ \textcolor{keyword}{public}\ QDialog}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//Konstruktor}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//@param\ parent\ wskaźnik\ do\ obiektu\ bazowego}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//@param\ client\ wskaźnik\ do\ obiektu\ klasy\ Client}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_new_account_window}{NewAccountWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr},\ \mbox{\hyperlink{class_client}{Client}}\ *client\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//Destruktor}}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_new_account_window_af0f3417b4c90f8d69658c8335e7bd660}{\string~NewAccountWindow}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//Slot\ realizujący\ utworzenie\ nowego\ konta\ dla\ rejestrującego\ się\ użytkownika}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_createAccountButton\_clicked();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//Slot\ realizujący\ zamknięcie\ interfejsu\ NewAccountWindow}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_exitButton\_clicked();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ reprezentujący\ interfejs\ użytkownika\ UI}}
+\DoxyCodeLine{00033\ \ \ \ \ Ui::NewAccountWindow\ *ui;}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ klasy\ Client}}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_client}{Client}}\ *client\_;}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ klasy\ AccountManager}}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_account_manager}{AccountManager}}\ *accountManager;}
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ NEWACCOUNTWINDOW\_H}}
+
+\end{DoxyCode}

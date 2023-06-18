@@ -1,0 +1,80 @@
+\doxysection{accountmanager.\+h}
+\hypertarget{accountmanager_8h_source}{}\label{accountmanager_8h_source}\mbox{\hyperlink{accountmanager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ ACCOUNTMANAGER\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ ACCOUNTMANAGER\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{bankaccount_8h}{bankaccount.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{client_8h}{client.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bank_account}{BankAccount}};}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_client}{Client}};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_account_manager}{AccountManager}}}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00019\ \ \ \ \ std::vector<BankAccount*>\ accounts;}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_client}{Client}}*\ client\_;}
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//Konstruktor}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//@param\ Client\ *client}}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_account_manager}{AccountManager}}(\mbox{\hyperlink{class_client}{Client}}*\ client);}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//Destruktor}}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_account_manager_aa62da7e8bf796004171eb77fd32a81af}{\string~AccountManager}}();}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//Funkcja\ wysyłająca\ transakcję\ do\ drugiego\ użytkownika}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//@param\ accountNumber}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//@param\ reciver}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//@param\ senderAccNumber}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//@param\ amount}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//@param\ title}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_account_manager_a2c2fc8fa5e5d4b05f88fca92a4e66962}{sendTransaction}}(\textcolor{keyword}{const}\ std::string\&\ accountNumber,\ \textcolor{keyword}{const}\ std::string\&\ reciver,\ \textcolor{keyword}{const}\ std::string\&\ senderAccNumber,\ \textcolor{keywordtype}{double}\ amount,\ \textcolor{keyword}{const}\ std::string\&\ title);}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//Funkcja\ dodająca\ pieniądze\ do\ konta\ użytkownika}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//@param\ amount}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//@param\ account}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_account_manager_a06d3a79bc9f23417e56d36ce556ac181}{addMoney}}(\textcolor{keywordtype}{double}\ amount,\ \mbox{\hyperlink{class_bank_account}{BankAccount}}*\ account);}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//Funkcja\ pobierająca\ pieniądze\ z\ konta\ użytkownika}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//@param\ amount}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//@param\ account}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_account_manager_acaaf1fd22cfe4ba7b77d3c5835e16aff}{takeMoney}}(\textcolor{keywordtype}{double}\ amount,\ \mbox{\hyperlink{class_bank_account}{BankAccount}}*\ account);}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//Funkcja\ obliczająca\ saldo}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_account_manager_a4d08e36566a076a3624ba3b8bf410f75}{calculateBalance}}();}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//Funkcja\ obliczająca\ zysk}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_account_manager_a46843a25add23ddec83cb2be551c2381}{calculateProfit}}();}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//Funkcja\ obliczająca\ wydatki}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_account_manager_a90380804050c64f839f2c875c77a6632}{calcualteExpanse}}();}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//Funkcja\ dodająca\ konto\ do\ systemu}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//@param\ account}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_account_manager_a232aa6eef3c4f65d7a8ff0986a3fc430}{addAccount}}(\mbox{\hyperlink{class_bank_account}{BankAccount}}*\ account);}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//Funkcja\ usuwająca\ konto\ z\ systemu}}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_account_manager_a6c9fe111d3db0b3ba3fa86179e1fa683}{removeAccount}}(\mbox{\hyperlink{class_bank_account}{BankAccount}}*\ account);}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//Funkcja\ wczytująca\ konta\ z\ pliku\ tekstowego}}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{//@param\ file\_name}}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_account_manager_abc682645cd4f4ab79f235b289fee82b8}{readAccounts}}(\textcolor{keyword}{const}\ std::string\ file\_name);}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//Funkcja\ wczytująca\ transakcje\ do\ pliku\ tekstowego}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{//@param\ file\_name}}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{comment}{//@param\ account}}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_account_manager_a9becb2225228555b6bfb6cea2d5c4e15}{readTransactions}}(\textcolor{keyword}{const}\ std::string\ file\_name,\ \mbox{\hyperlink{class_bank_account}{BankAccount}}\ *account);}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//Funkcja\ zapisująca\ konta\ do\ plikut\ tekstowego}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//@param\ file\_name}}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_account_manager_a92d7743df2b626e4dac471a449c0770f}{writeAccounts}}(\textcolor{keyword}{const}\ std::string\ file\_name);}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//Funkcja\ zapisująca\ transakcje\ do\ pliku\ tekstowego}}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{comment}{//@param\ file\_name}}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//@param\ account}}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_account_manager_a4a23637b44dcf2ad74953b40d12995ba}{writeTransactions}}(\textcolor{keyword}{const}\ std::string\ file\_name,\ \mbox{\hyperlink{class_bank_account}{BankAccount}}\ *account);}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{comment}{//Funkcja\ znajdująca\ konto\ po\ jego\ numerze}}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{//@param\ accountNumber}}
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{class_bank_account}{BankAccount}}*\ \mbox{\hyperlink{class_account_manager_a5fb315da6a546f70025f2ade362c26a9}{findAccount}}(\textcolor{keyword}{const}\ std::string\&\ accountNumber)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{//Funkcja\ znajdująca\ konto\ po\ jego\ właścicielu}}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{//@param\ idOwner}}
+\DoxyCodeLine{00072\ \ \ \ \ std::vector<BankAccount*>\ \mbox{\hyperlink{class_account_manager_ae56d0238ac406ab70d14bc68dcaf0638}{findByOwner}}(\textcolor{keyword}{const}\ std::string\&\ idOwner)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00073\ \};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ACCOUNTMANAGER\_H}}
+
+\end{DoxyCode}

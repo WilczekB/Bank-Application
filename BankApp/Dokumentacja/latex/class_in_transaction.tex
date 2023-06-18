@@ -1,0 +1,107 @@
+\doxysection{In\+Transaction Class Reference}
+\hypertarget{class_in_transaction}{}\label{class_in_transaction}\index{InTransaction@{InTransaction}}
+
+
+{\ttfamily \#include $<$intransaction.\+h$>$}
+
+Inheritance diagram for In\+Transaction\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_in_transaction}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_in_transaction_a34e5ec5d63ced1165d9e86ca2f539e1d}{In\+Transaction}} (double amount, const std\+::string \&sender, const std\+::string \&sender\+Account\+Number, const std\+::string \&title)
+\item 
+std\+::string \mbox{\hyperlink{class_in_transaction_af923151ef10d7e61b04f1db807935692}{get\+Type}} () const override
+\item 
+std\+::string \mbox{\hyperlink{class_in_transaction_ae995188e523c39c9c627725d1e4a183f}{get\+Info}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_transaction}{Transaction}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_transaction_a38af48f6cb4634107677b21e8711883a}{Transaction}} (double amount, const std\+::string \&reciver, const std\+::string \&sender\+Account\+Number, const std\+::string \&title)
+\item 
+virtual \mbox{\hyperlink{class_transaction_a362b0d2524d0c799165190517192dca9}{\texorpdfstring{$\sim$}{\string~}\+Transaction}} ()
+\item 
+double \mbox{\hyperlink{class_transaction_a82032f30ae2c62aaf5b911994f844a31}{get\+Amount}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{class_transaction_ade0800e40c2ca358a1d2d07eeeb8dfca}{get\+Sender}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{class_transaction_aac186e6ecb3b8849fb4e0f468bfb53a7}{get\+Reciver}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{class_transaction_a6c1cc9ab5ac36b2816d0ee9d6b6fb15c}{get\+Reciver\+Acc\+Number}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{class_transaction_a9ed1f21f5c146e5e40eca9f95162e95b}{get\+Sender\+Acc\+Number}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{class_transaction_a17c995051b4ba792609c69241977ddb4}{get\+Title}} () const
+\item 
+int \mbox{\hyperlink{class_transaction_ab55ac6a24f28e692fb13c4b705669cb0}{get\+Id}} () const
+\item 
+virtual std\+::string \mbox{\hyperlink{class_transaction_a1df758888fad2b6f36495d940a664bbc}{get\+Type}} () const =0
+\item 
+virtual std\+::string \mbox{\hyperlink{class_transaction_a65fb126f19d6a05abed371cda0d78924}{get\+Info}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_transaction}{Transaction}}}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_transaction_abf9e364667d423ab40172d336ff6aa7c}{amount\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{class_transaction_a17eabcab1a5a4ee3cb969907292ccee1}{sender\+\_\+acc\+\_\+number\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{class_transaction_ab27dc1dc81d85a195e08ac4cb2394415}{reciver\+\_\+acc\+\_\+number\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{class_transaction_a1b2398f3721aa176b09b34c6ea5b2a40}{title\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{class_transaction_ad32c29d07497e99c3ce3d7bb9887f17c}{reciver\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{class_transaction_abdf12a7f28a41e98ca0f3ac14533d6ee}{sender\+\_\+}}
+\item 
+int \mbox{\hyperlink{class_transaction_a8e43580c2afbd59f46bafbd7dccb2ad0}{id}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes inherited from \mbox{\hyperlink{class_transaction}{Transaction}}}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_transaction_a99974a9f56a83095cd6de8d61ccfe04a}{id\+Counter}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_in_transaction_a34e5ec5d63ced1165d9e86ca2f539e1d}\label{class_in_transaction_a34e5ec5d63ced1165d9e86ca2f539e1d} 
+\index{InTransaction@{InTransaction}!InTransaction@{InTransaction}}
+\index{InTransaction@{InTransaction}!InTransaction@{InTransaction}}
+\doxysubsubsection{\texorpdfstring{InTransaction()}{InTransaction()}}
+{\footnotesize\ttfamily In\+Transaction\+::\+In\+Transaction (\begin{DoxyParamCaption}\item[{double}]{amount,  }\item[{const std\+::string \&}]{sender,  }\item[{const std\+::string \&}]{sender\+Account\+Number,  }\item[{const std\+::string \&}]{title }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_in_transaction_ae995188e523c39c9c627725d1e4a183f}\label{class_in_transaction_ae995188e523c39c9c627725d1e4a183f} 
+\index{InTransaction@{InTransaction}!getInfo@{getInfo}}
+\index{getInfo@{getInfo}!InTransaction@{InTransaction}}
+\doxysubsubsection{\texorpdfstring{getInfo()}{getInfo()}}
+{\footnotesize\ttfamily std\+::string In\+Transaction\+::get\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_transaction_a65fb126f19d6a05abed371cda0d78924}{Transaction}}.
+
+\Hypertarget{class_in_transaction_af923151ef10d7e61b04f1db807935692}\label{class_in_transaction_af923151ef10d7e61b04f1db807935692} 
+\index{InTransaction@{InTransaction}!getType@{getType}}
+\index{getType@{getType}!InTransaction@{InTransaction}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily std\+::string In\+Transaction\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_transaction_a1df758888fad2b6f36495d940a664bbc}{Transaction}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{intransaction_8h}{intransaction.\+h}}\item 
+\mbox{\hyperlink{intransaction_8cpp}{intransaction.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,242 @@
+\doxysection{Credit Class Reference}
+\hypertarget{class_credit}{}\label{class_credit}\index{Credit@{Credit}}
+
+
+{\ttfamily \#include $<$credit.\+h$>$}
+
+Inheritance diagram for Credit\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_credit}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_credit_a1a2a1d3b74636b39057500cd17e0cc15}{Credit}} (std\+::string account\+\_\+number, double balance, QDate start\+\_\+date, int financial\+\_\+period, double investment\+\_\+value, double percentage, double commision, std\+::string owner\+Pesel)
+\item 
+\mbox{\hyperlink{class_credit_ae087c6d2e859815d6e3ae79eaf7e133b}{\texorpdfstring{$\sim$}{\string~}\+Credit}} ()
+\item 
+void \mbox{\hyperlink{class_credit_a15d749166803b5df1d72b2a333a6488f}{set\+Start\+Date}} (QDate start\+\_\+date)
+\item 
+void \mbox{\hyperlink{class_credit_a315bc51e94e49d5f798ad7c5caa96a45}{set\+Financial\+Period}} (int financial\+\_\+period)
+\item 
+void \mbox{\hyperlink{class_credit_a0346417b4cda09a7585f7223c71efaa1}{set\+Investment\+Value}} (double investment\+\_\+value)
+\item 
+void \mbox{\hyperlink{class_credit_a4558b99df0ff11861ccf0c666b7c52dd}{set\+Percentage}} (double percentage)
+\item 
+void \mbox{\hyperlink{class_credit_ae0e919c995d2532db68fd248822f082a}{set\+Commision}} (double commision)
+\item 
+QDate \mbox{\hyperlink{class_credit_a829cd4adf13c12159a4611bf8f86935d}{get\+Start\+Date}} () const
+\item 
+int \mbox{\hyperlink{class_credit_a2db3102565c919f30f3acbda1771e97f}{get\+Financial\+Period}} () const
+\item 
+double \mbox{\hyperlink{class_credit_a314284528e2c780928560d83e8e9f2a6}{get\+Investment\+Value}} () const
+\item 
+double \mbox{\hyperlink{class_credit_ae05ec046b1fa84c3fe5117b1754e23c4}{get\+Commision}} () const
+\item 
+double \mbox{\hyperlink{class_credit_a24938775cdeb4885cf9f6e7c2d6e43ea}{get\+Percentage}} () const
+\item 
+bool \mbox{\hyperlink{class_credit_a019830175d926001d644fc98acc5d505}{withdraw}} (double amount)
+\item 
+std\+::string \mbox{\hyperlink{class_credit_a3c18494c3f97fb3ff8015f0cceeb2b28}{get\+Type}} () const
+\item 
+void \mbox{\hyperlink{class_credit_aa939c40c9ee29db48aed4126c918912c}{set\+Type}} ()
+\item 
+void \mbox{\hyperlink{class_credit_ae3acab6534775ccfb16b60acc34cc30a}{deposit}} (double amount)
+\item 
+void \mbox{\hyperlink{class_credit_a636d0cf2d25aa2e4bed7272761c403eb}{calculate\+Credit}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_bank_account}{Bank\+Account}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bank_account_aea76f19fafd3cdbd6f15bf9d5b141412}{Bank\+Account}} (std\+::string account\+\_\+number, double balance, bool is\+Active, std\+::string owner\+Pesel, std\+::string type)
+\item 
+virtual \mbox{\hyperlink{class_bank_account_af8ff84fe814689a9a6e74c5ae36761d8}{\texorpdfstring{$\sim$}{\string~}\+Bank\+Account}} ()
+\item 
+void \mbox{\hyperlink{class_bank_account_ae9bffacb31429799552b9aadd9c02544}{set\+Is\+Active}} (bool is\+Acitve)
+\item 
+void \mbox{\hyperlink{class_bank_account_a691745d227fdc391c1edfc72906d3a0b}{set\+Balance}} (double balance)
+\item 
+void \mbox{\hyperlink{class_bank_account_a5717f4186e38af1a7677b49683d1616d}{set\+Calculator}} (\mbox{\hyperlink{class_calculator}{Calculator}} \texorpdfstring{$\ast$}{*}calculator)
+\item 
+void \mbox{\hyperlink{class_bank_account_aa69292f134492a301e20d3d9dee294a7}{set\+Account\+Number}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_bank_account_a3af00dc7b6a2e56d4f64984c780a7ae0}{get\+Account\+Number}} () const
+\item 
+bool \mbox{\hyperlink{class_bank_account_a383c1a29063284e78ab6584845fdc03d}{get\+Is\+Active}} () const
+\item 
+double \mbox{\hyperlink{class_bank_account_aeb202a68eff290686b9926ad386293be}{get\+Balance}} () const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_transaction}{Transaction}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_bank_account_aa460e1f94e53945a79a33e7f6771e9d5}{get\+Transactions}} () const
+\item 
+\mbox{\hyperlink{class_client}{Client}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_bank_account_a4df5528233f4f67be96d4e6bfbc715b4}{get\+Owner}} () const
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_bank_account_ad81b7f18aa5cbc3733821eb8a47c33ea}{get\+Transactions\+Id}} () const
+\item 
+std\+::string \mbox{\hyperlink{class_bank_account_a3336abb2fb385cb827c6bf0e9c71413c}{get\+Owner\+ID}} () const
+\item 
+\mbox{\hyperlink{class_calculator}{Calculator}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_bank_account_a80611fa0eddca23c0ea7cd2945daaede}{get\+Calculator}} () const
+\item 
+QString \mbox{\hyperlink{class_bank_account_ab723d7b42cd8346f5827edb26656823a}{show\+Transactions}} () const
+\item 
+virtual void \mbox{\hyperlink{class_bank_account_a323a2a33c5285eb44ad046d52f42bfcd}{add\+Transaction}} (\mbox{\hyperlink{class_transaction}{Transaction}} \texorpdfstring{$\ast$}{*}transaction)
+\item 
+virtual bool \mbox{\hyperlink{class_bank_account_aca81074540421d8f9c9dfa1f5e2ba783}{withdraw}} (double amount)=0
+\item 
+virtual std\+::string \mbox{\hyperlink{class_bank_account_a921000191c6e5ac5bb09e00f60f3b2cd}{get\+Type}} () const =0
+\item 
+virtual void \mbox{\hyperlink{class_bank_account_aef3866fc8f6a284a20e34689cb3f3938}{set\+Type}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_bank_account_a9c073d1e16037e07babcd4f503309943}{deposit}} (double amount)=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_bank_account}{Bank\+Account}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_bank_account_a70f9ce1361dd6ef6a6ef4a93af22cfd4}{account\+\_\+number\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_bank_account_aaa6ec014153c673bcb900d980c80119d}{balance\+\_\+}}
+\item 
+bool \mbox{\hyperlink{class_bank_account_a9d877c76c31386d94d8aecbfb8d6b29f}{is\+Active\+\_\+}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_transaction}{Transaction}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_bank_account_a3648ef99842cd5d451034a1dc6c57212}{transactions}}
+\item 
+std\+::string \mbox{\hyperlink{class_bank_account_a1bbe0a8cdc6ab99b5043fe46056117aa}{type\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{class_bank_account_a36508bb4b8a5f99baab470a500dc6f23}{owner\+ID}}
+\item 
+\mbox{\hyperlink{class_calculator}{Calculator}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_bank_account_ad61b3cbccabb2351a1e3c4fcdf4e6d95}{calculator\+\_\+}}
+\item 
+\mbox{\hyperlink{class_client}{Client}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_bank_account_a8e49bf47b3b963d88373fa042dd1dbc8}{owner}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_credit_a1a2a1d3b74636b39057500cd17e0cc15}\label{class_credit_a1a2a1d3b74636b39057500cd17e0cc15} 
+\index{Credit@{Credit}!Credit@{Credit}}
+\index{Credit@{Credit}!Credit@{Credit}}
+\doxysubsubsection{\texorpdfstring{Credit()}{Credit()}}
+{\footnotesize\ttfamily Credit\+::\+Credit (\begin{DoxyParamCaption}\item[{std\+::string}]{account\+\_\+number,  }\item[{double}]{balance,  }\item[{QDate}]{start\+\_\+date,  }\item[{int}]{financial\+\_\+period,  }\item[{double}]{investment\+\_\+value,  }\item[{double}]{percentage,  }\item[{double}]{commision,  }\item[{std\+::string}]{owner\+Pesel }\end{DoxyParamCaption})}
+
+\Hypertarget{class_credit_ae087c6d2e859815d6e3ae79eaf7e133b}\label{class_credit_ae087c6d2e859815d6e3ae79eaf7e133b} 
+\index{Credit@{Credit}!````~Credit@{\texorpdfstring{$\sim$}{\string~}Credit}}
+\index{````~Credit@{\texorpdfstring{$\sim$}{\string~}Credit}!Credit@{Credit}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Credit()}{\string~Credit()}}
+{\footnotesize\ttfamily Credit\+::\texorpdfstring{$\sim$}{\string~}\+Credit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_credit_a636d0cf2d25aa2e4bed7272761c403eb}\label{class_credit_a636d0cf2d25aa2e4bed7272761c403eb} 
+\index{Credit@{Credit}!calculateCredit@{calculateCredit}}
+\index{calculateCredit@{calculateCredit}!Credit@{Credit}}
+\doxysubsubsection{\texorpdfstring{calculateCredit()}{calculateCredit()}}
+{\footnotesize\ttfamily void Credit\+::calculate\+Credit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_credit_ae3acab6534775ccfb16b60acc34cc30a}\label{class_credit_ae3acab6534775ccfb16b60acc34cc30a} 
+\index{Credit@{Credit}!deposit@{deposit}}
+\index{deposit@{deposit}!Credit@{Credit}}
+\doxysubsubsection{\texorpdfstring{deposit()}{deposit()}}
+{\footnotesize\ttfamily void Credit\+::deposit (\begin{DoxyParamCaption}\item[{double}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_bank_account_a9c073d1e16037e07babcd4f503309943}{Bank\+Account}}.
+
+\Hypertarget{class_credit_ae05ec046b1fa84c3fe5117b1754e23c4}\label{class_credit_ae05ec046b1fa84c3fe5117b1754e23c4} 
+\index{Credit@{Credit}!getCommision@{getCommision}}
+\index{getCommision@{getCommision}!Credit@{Credit}}
+\doxysubsubsection{\texorpdfstring{getCommision()}{getCommision()}}
+{\footnotesize\ttfamily double Credit\+::get\+Commision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_credit_a2db3102565c919f30f3acbda1771e97f}\label{class_credit_a2db3102565c919f30f3acbda1771e97f} 
+\index{Credit@{Credit}!getFinancialPeriod@{getFinancialPeriod}}
+\index{getFinancialPeriod@{getFinancialPeriod}!Credit@{Credit}}
+\doxysubsubsection{\texorpdfstring{getFinancialPeriod()}{getFinancialPeriod()}}
+{\footnotesize\ttfamily int Credit\+::get\+Financial\+Period (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_credit_a314284528e2c780928560d83e8e9f2a6}\label{class_credit_a314284528e2c780928560d83e8e9f2a6} 
+\index{Credit@{Credit}!getInvestmentValue@{getInvestmentValue}}
+\index{getInvestmentValue@{getInvestmentValue}!Credit@{Credit}}
+\doxysubsubsection{\texorpdfstring{getInvestmentValue()}{getInvestmentValue()}}
+{\footnotesize\ttfamily double Credit\+::get\+Investment\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_credit_a24938775cdeb4885cf9f6e7c2d6e43ea}\label{class_credit_a24938775cdeb4885cf9f6e7c2d6e43ea} 
+\index{Credit@{Credit}!getPercentage@{getPercentage}}
+\index{getPercentage@{getPercentage}!Credit@{Credit}}
+\doxysubsubsection{\texorpdfstring{getPercentage()}{getPercentage()}}
+{\footnotesize\ttfamily double Credit\+::get\+Percentage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_credit_a829cd4adf13c12159a4611bf8f86935d}\label{class_credit_a829cd4adf13c12159a4611bf8f86935d} 
+\index{Credit@{Credit}!getStartDate@{getStartDate}}
+\index{getStartDate@{getStartDate}!Credit@{Credit}}
+\doxysubsubsection{\texorpdfstring{getStartDate()}{getStartDate()}}
+{\footnotesize\ttfamily QDate Credit\+::get\+Start\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_credit_a3c18494c3f97fb3ff8015f0cceeb2b28}\label{class_credit_a3c18494c3f97fb3ff8015f0cceeb2b28} 
+\index{Credit@{Credit}!getType@{getType}}
+\index{getType@{getType}!Credit@{Credit}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily std\+::string Credit\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_bank_account_a921000191c6e5ac5bb09e00f60f3b2cd}{Bank\+Account}}.
+
+\Hypertarget{class_credit_ae0e919c995d2532db68fd248822f082a}\label{class_credit_ae0e919c995d2532db68fd248822f082a} 
+\index{Credit@{Credit}!setCommision@{setCommision}}
+\index{setCommision@{setCommision}!Credit@{Credit}}
+\doxysubsubsection{\texorpdfstring{setCommision()}{setCommision()}}
+{\footnotesize\ttfamily void Credit\+::set\+Commision (\begin{DoxyParamCaption}\item[{double}]{commision }\end{DoxyParamCaption})}
+
+\Hypertarget{class_credit_a315bc51e94e49d5f798ad7c5caa96a45}\label{class_credit_a315bc51e94e49d5f798ad7c5caa96a45} 
+\index{Credit@{Credit}!setFinancialPeriod@{setFinancialPeriod}}
+\index{setFinancialPeriod@{setFinancialPeriod}!Credit@{Credit}}
+\doxysubsubsection{\texorpdfstring{setFinancialPeriod()}{setFinancialPeriod()}}
+{\footnotesize\ttfamily void Credit\+::set\+Financial\+Period (\begin{DoxyParamCaption}\item[{int}]{financial\+\_\+period }\end{DoxyParamCaption})}
+
+\Hypertarget{class_credit_a0346417b4cda09a7585f7223c71efaa1}\label{class_credit_a0346417b4cda09a7585f7223c71efaa1} 
+\index{Credit@{Credit}!setInvestmentValue@{setInvestmentValue}}
+\index{setInvestmentValue@{setInvestmentValue}!Credit@{Credit}}
+\doxysubsubsection{\texorpdfstring{setInvestmentValue()}{setInvestmentValue()}}
+{\footnotesize\ttfamily void Credit\+::set\+Investment\+Value (\begin{DoxyParamCaption}\item[{double}]{investment\+\_\+value }\end{DoxyParamCaption})}
+
+\Hypertarget{class_credit_a4558b99df0ff11861ccf0c666b7c52dd}\label{class_credit_a4558b99df0ff11861ccf0c666b7c52dd} 
+\index{Credit@{Credit}!setPercentage@{setPercentage}}
+\index{setPercentage@{setPercentage}!Credit@{Credit}}
+\doxysubsubsection{\texorpdfstring{setPercentage()}{setPercentage()}}
+{\footnotesize\ttfamily void Credit\+::set\+Percentage (\begin{DoxyParamCaption}\item[{double}]{percentage }\end{DoxyParamCaption})}
+
+\Hypertarget{class_credit_a15d749166803b5df1d72b2a333a6488f}\label{class_credit_a15d749166803b5df1d72b2a333a6488f} 
+\index{Credit@{Credit}!setStartDate@{setStartDate}}
+\index{setStartDate@{setStartDate}!Credit@{Credit}}
+\doxysubsubsection{\texorpdfstring{setStartDate()}{setStartDate()}}
+{\footnotesize\ttfamily void Credit\+::set\+Start\+Date (\begin{DoxyParamCaption}\item[{QDate}]{start\+\_\+date }\end{DoxyParamCaption})}
+
+\Hypertarget{class_credit_aa939c40c9ee29db48aed4126c918912c}\label{class_credit_aa939c40c9ee29db48aed4126c918912c} 
+\index{Credit@{Credit}!setType@{setType}}
+\index{setType@{setType}!Credit@{Credit}}
+\doxysubsubsection{\texorpdfstring{setType()}{setType()}}
+{\footnotesize\ttfamily void Credit\+::set\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_bank_account_aef3866fc8f6a284a20e34689cb3f3938}{Bank\+Account}}.
+
+\Hypertarget{class_credit_a019830175d926001d644fc98acc5d505}\label{class_credit_a019830175d926001d644fc98acc5d505} 
+\index{Credit@{Credit}!withdraw@{withdraw}}
+\index{withdraw@{withdraw}!Credit@{Credit}}
+\doxysubsubsection{\texorpdfstring{withdraw()}{withdraw()}}
+{\footnotesize\ttfamily bool Credit\+::withdraw (\begin{DoxyParamCaption}\item[{double}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_bank_account_aca81074540421d8f9c9dfa1f5e2ba783}{Bank\+Account}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{credit_8h}{credit.\+h}}\item 
+\mbox{\hyperlink{credit_8cpp}{credit.\+cpp}}\end{DoxyCompactItemize}

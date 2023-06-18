@@ -1,0 +1,103 @@
+\doxysection{client.\+h}
+\hypertarget{client_8h_source}{}\label{client_8h_source}\mbox{\hyperlink{client_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ CLIENT\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ CLIENT\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QDate>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_account_manager}{AccountManager}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_client}{Client}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{//Pole\ przechowujące\ imię\ klienta}}
+\DoxyCodeLine{00015\ \ \ \ \ std::string\ name\_;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//Pole\ przechowujące\ nazwisko\ klienta}}
+\DoxyCodeLine{00017\ \ \ \ \ std::string\ surname\_;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//Pole\ przechowujące\ email\ klienta}}
+\DoxyCodeLine{00019\ \ \ \ \ std::string\ email\_;}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//Pole\ przechowujące\ hasło\ klienta}}
+\DoxyCodeLine{00021\ \ \ \ \ std::string\ password\_;}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//Pole\ przechowujące\ datę\ urodzenia\ klienta}}
+\DoxyCodeLine{00023\ \ \ \ \ QDate\ date\_of\_birth\_;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//Pole\ przechowujące\ pesel\ klienta}}
+\DoxyCodeLine{00025\ \ \ \ \ std::string\ pesel\_;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//Pole\ przechowujące\ numer\ telefonu\ klienta}}
+\DoxyCodeLine{00027\ \ \ \ \ std::string\ phone\_number\_;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//Pole\ przechowujące\ pin\ klienta}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ pin\_;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//Wskaźnik\ na\ obiekt\ AccountManager,\ który\ służy\ do\ zarządzania\ kontami}}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_account_manager}{AccountManager}}*\ accManager;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//Konstruktor}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//@param\ name\ przechowuje\ imię\ klienta}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//@param\ surname\ przechowuje\ nazwisko\ klienta}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//@param\ email\ przechowuje\ email\ klienta}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//@param\ password\ przechowuje\ hasło\ klienta}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//@param\ dateOfBirth\ przechowuje\ datę\ urodzenia\ klienta}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//@param\ pesel\ przechowuje\ pesel\ klienta}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//@param\ phone\_number\ przechowuje\ numer\ telefonu\ klienta}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//@param\ pin\ przechowuje\ numer\ pin\ klienta}}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{class_client}{Client}}(\textcolor{keyword}{const}\ std::string\&\ name,\ \textcolor{keyword}{const}\ std::string\&\ surname,\ \textcolor{keyword}{const}\ std::string\&\ email,\ \textcolor{keyword}{const}\ std::string\&\ password,\ \textcolor{keyword}{const}\ QDate\&\ dateOfBirth,}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ pesel,\ \textcolor{keyword}{const}\ std::string\&\ phone\_number,\ \textcolor{keywordtype}{int}\ pin);}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//Destruktor}}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{class_client_a840e519ca781888cbd54181572ebe3a7}{\string~Client}}();}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//Funkcja\ ustawiająca\ pole\ name\_}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//@param\ name}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_client_aaf84d26c82f8c91bf943edce1044c574}{setName}}(\textcolor{keyword}{const}\ std::string\&\ name);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//Funkcja\ ustawiająca\ pole\ password\_}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//@param\ password}}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_client_a054197f1f99b125eec4b083ac5809b5f}{setPassword}}(\textcolor{keyword}{const}\ std::string\&\ password);}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//Funkcja\ ustawiająca\ pole\ surname\_}}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{//@param\ surname}}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_client_aa44391685f11bee3caa1a12995ef195e}{setSurname}}(\textcolor{keyword}{const}\ std::string\&\ surname);}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//Funkcja\ ustawiająca\ pole\ date\_of\_birth\_}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{//@param\ date\_of\_birth}}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_client_a0a3296dcc1d33f1aa13011e1073f9444}{setDateBirth}}(\textcolor{keyword}{const}\ QDate\&\ date\_of\_birth);}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//Funkcja\ ustawiająca\ pole\ email\_}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//@param\ email}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_client_a5b0457a87823705e577944013a00dcce}{setEmail}}(\textcolor{keyword}{const}\ std::string\&\ email);}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{comment}{//Funkcja\ ustawiająca\ pole\ pesel\_}}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//@param\ pesel}}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_client_a567ce9fff0ab375f7195f52cac50733b}{setPesel}}(\textcolor{keyword}{const}\ std::string\&\ pesel);}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//Funkcja\ ustawiająca\ pole\ phone\_number\_}}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//@param\ phone\_number}}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_client_a81297f9a58db863844355b91cfb7beef}{setPhoneNumber}}(\textcolor{keyword}{const}\ std::string\&\ phone\_number);}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{//Funkcja\ ustawiająca\ pole\ accManager}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//@param\ accountManager}}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_client_a5da18d3762c52b69dacd7ea63d451091}{setAccountManager}}(\mbox{\hyperlink{class_account_manager}{AccountManager}}*\ accountManager);}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{//Funkcja\ ustawiająca\ pole\ pin\_}}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{//@param\ pin}}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_client_a4877f6808f752731b94d713187c7e469}{setPIN}}(\textcolor{keywordtype}{int}\ pin);}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ wartość\ pola\ name\_}}
+\DoxyCodeLine{00075\ \ \ \ \ std::string\ \mbox{\hyperlink{class_client_a6865c5e1c8179faa4f3d2a47e500b772}{getName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ wartość\ pola\ password\_}}
+\DoxyCodeLine{00077\ \ \ \ \ std::string\ \mbox{\hyperlink{class_client_a0abcb43c3d885678556ac4044b060b5a}{getPassword}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ wartość\ pola\ surname\_}}
+\DoxyCodeLine{00079\ \ \ \ \ std::string\ \mbox{\hyperlink{class_client_aa260220735a286d273d984d9f35cf8b3}{getSurname}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ wartość\ pola\ date\_of\_birth\_}}
+\DoxyCodeLine{00081\ \ \ \ \ QDate\ \mbox{\hyperlink{class_client_a94a83ff7c289fe8f82179af9e8c11c26}{getDateBirth}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ wartość\ pola\ email\_}}
+\DoxyCodeLine{00083\ \ \ \ \ std::string\ \mbox{\hyperlink{class_client_a593ccb0140cb737becf7588ed2f50468}{getEmail}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00084\ \ \ \ \ \mbox{\hyperlink{class_account_manager}{AccountManager}}*\ \mbox{\hyperlink{class_client_a516190900afaf25a39663709878dc21b}{getAccountManager}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ wartość\ pola\ pesel\_}}
+\DoxyCodeLine{00086\ \ \ \ \ std::string\ \mbox{\hyperlink{class_client_ae73d52e3a1f7ba6fb2658f84235525cb}{getPesel}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ wartość\ pola\ phone\_number\_}}
+\DoxyCodeLine{00088\ \ \ \ \ std::string\ \mbox{\hyperlink{class_client_aee3b526f3dadd7a46ab215974ce9273f}{getPhoneNumber}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ imię\ i\ nazwisko\ użytkownika}}
+\DoxyCodeLine{00090\ \ \ \ \ std::string\ \mbox{\hyperlink{class_client_acb76e53aba05709705a64bc19d531f64}{getFullname}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{comment}{//Funkcja\ zwracająca\ wartość\ pola\ pin\_}}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_client_a4a57fc73ded8392ec35601345e646142}{getPIN}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{comment}{//Funkcja\ weryfikująca\ poprawność\ wprowadzonego\ pinu\ przez\ użytkownika}}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{comment}{//@param\ code\ kod\ pin\ podany\ przez\ użytkownika}}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_client_a6622a2f9ea73f6d92b4a0761be43573d}{verifyPIN}}(\textcolor{keywordtype}{int}\ code);}
+\DoxyCodeLine{00096\ \};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CLIENT\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,149 @@
+\doxysection{Account\+Manager Class Reference}
+\hypertarget{class_account_manager}{}\label{class_account_manager}\index{AccountManager@{AccountManager}}
+
+
+{\ttfamily \#include $<$accountmanager.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_account_manager_a6b3488b9fd9743c9c563d1df27b1b959}{Account\+Manager}} (\mbox{\hyperlink{class_client}{Client}} \texorpdfstring{$\ast$}{*}client)
+\item 
+\mbox{\hyperlink{class_account_manager_aa62da7e8bf796004171eb77fd32a81af}{\texorpdfstring{$\sim$}{\string~}\+Account\+Manager}} ()
+\item 
+bool \mbox{\hyperlink{class_account_manager_a2c2fc8fa5e5d4b05f88fca92a4e66962}{send\+Transaction}} (const std\+::string \&account\+Number, const std\+::string \&reciver, const std\+::string \&sender\+Acc\+Number, double amount, const std\+::string \&title)
+\item 
+void \mbox{\hyperlink{class_account_manager_a06d3a79bc9f23417e56d36ce556ac181}{add\+Money}} (double amount, \mbox{\hyperlink{class_bank_account}{Bank\+Account}} \texorpdfstring{$\ast$}{*}account)
+\item 
+void \mbox{\hyperlink{class_account_manager_acaaf1fd22cfe4ba7b77d3c5835e16aff}{take\+Money}} (double amount, \mbox{\hyperlink{class_bank_account}{Bank\+Account}} \texorpdfstring{$\ast$}{*}account)
+\item 
+double \mbox{\hyperlink{class_account_manager_a4d08e36566a076a3624ba3b8bf410f75}{calculate\+Balance}} ()
+\item 
+double \mbox{\hyperlink{class_account_manager_a46843a25add23ddec83cb2be551c2381}{calculate\+Profit}} ()
+\item 
+double \mbox{\hyperlink{class_account_manager_a90380804050c64f839f2c875c77a6632}{calcualte\+Expanse}} ()
+\item 
+void \mbox{\hyperlink{class_account_manager_a232aa6eef3c4f65d7a8ff0986a3fc430}{add\+Account}} (\mbox{\hyperlink{class_bank_account}{Bank\+Account}} \texorpdfstring{$\ast$}{*}account)
+\item 
+bool \mbox{\hyperlink{class_account_manager_a6c9fe111d3db0b3ba3fa86179e1fa683}{remove\+Account}} (\mbox{\hyperlink{class_bank_account}{Bank\+Account}} \texorpdfstring{$\ast$}{*}account)
+\item 
+void \mbox{\hyperlink{class_account_manager_abc682645cd4f4ab79f235b289fee82b8}{read\+Accounts}} (const std\+::string file\+\_\+name)
+\item 
+void \mbox{\hyperlink{class_account_manager_a9becb2225228555b6bfb6cea2d5c4e15}{read\+Transactions}} (const std\+::string file\+\_\+name, \mbox{\hyperlink{class_bank_account}{Bank\+Account}} \texorpdfstring{$\ast$}{*}account)
+\item 
+void \mbox{\hyperlink{class_account_manager_a92d7743df2b626e4dac471a449c0770f}{write\+Accounts}} (const std\+::string file\+\_\+name)
+\item 
+void \mbox{\hyperlink{class_account_manager_a4a23637b44dcf2ad74953b40d12995ba}{write\+Transactions}} (const std\+::string file\+\_\+name, \mbox{\hyperlink{class_bank_account}{Bank\+Account}} \texorpdfstring{$\ast$}{*}account)
+\item 
+\mbox{\hyperlink{class_bank_account}{Bank\+Account}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_account_manager_a5fb315da6a546f70025f2ade362c26a9}{find\+Account}} (const std\+::string \&account\+Number) const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_bank_account}{Bank\+Account}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_account_manager_ae56d0238ac406ab70d14bc68dcaf0638}{find\+By\+Owner}} (const std\+::string \&id\+Owner) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_account_manager_a6b3488b9fd9743c9c563d1df27b1b959}\label{class_account_manager_a6b3488b9fd9743c9c563d1df27b1b959} 
+\index{AccountManager@{AccountManager}!AccountManager@{AccountManager}}
+\index{AccountManager@{AccountManager}!AccountManager@{AccountManager}}
+\doxysubsubsection{\texorpdfstring{AccountManager()}{AccountManager()}}
+{\footnotesize\ttfamily Account\+Manager\+::\+Account\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_client}{Client}} \texorpdfstring{$\ast$}{*}}]{client }\end{DoxyParamCaption})}
+
+\Hypertarget{class_account_manager_aa62da7e8bf796004171eb77fd32a81af}\label{class_account_manager_aa62da7e8bf796004171eb77fd32a81af} 
+\index{AccountManager@{AccountManager}!````~AccountManager@{\texorpdfstring{$\sim$}{\string~}AccountManager}}
+\index{````~AccountManager@{\texorpdfstring{$\sim$}{\string~}AccountManager}!AccountManager@{AccountManager}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}AccountManager()}{\string~AccountManager()}}
+{\footnotesize\ttfamily Account\+Manager\+::\texorpdfstring{$\sim$}{\string~}\+Account\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_account_manager_a232aa6eef3c4f65d7a8ff0986a3fc430}\label{class_account_manager_a232aa6eef3c4f65d7a8ff0986a3fc430} 
+\index{AccountManager@{AccountManager}!addAccount@{addAccount}}
+\index{addAccount@{addAccount}!AccountManager@{AccountManager}}
+\doxysubsubsection{\texorpdfstring{addAccount()}{addAccount()}}
+{\footnotesize\ttfamily void Account\+Manager\+::add\+Account (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bank_account}{Bank\+Account}} \texorpdfstring{$\ast$}{*}}]{account }\end{DoxyParamCaption})}
+
+\Hypertarget{class_account_manager_a06d3a79bc9f23417e56d36ce556ac181}\label{class_account_manager_a06d3a79bc9f23417e56d36ce556ac181} 
+\index{AccountManager@{AccountManager}!addMoney@{addMoney}}
+\index{addMoney@{addMoney}!AccountManager@{AccountManager}}
+\doxysubsubsection{\texorpdfstring{addMoney()}{addMoney()}}
+{\footnotesize\ttfamily void Account\+Manager\+::add\+Money (\begin{DoxyParamCaption}\item[{double}]{amount,  }\item[{\mbox{\hyperlink{class_bank_account}{Bank\+Account}} \texorpdfstring{$\ast$}{*}}]{account }\end{DoxyParamCaption})}
+
+\Hypertarget{class_account_manager_a90380804050c64f839f2c875c77a6632}\label{class_account_manager_a90380804050c64f839f2c875c77a6632} 
+\index{AccountManager@{AccountManager}!calcualteExpanse@{calcualteExpanse}}
+\index{calcualteExpanse@{calcualteExpanse}!AccountManager@{AccountManager}}
+\doxysubsubsection{\texorpdfstring{calcualteExpanse()}{calcualteExpanse()}}
+{\footnotesize\ttfamily double Account\+Manager\+::calcualte\+Expanse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_account_manager_a4d08e36566a076a3624ba3b8bf410f75}\label{class_account_manager_a4d08e36566a076a3624ba3b8bf410f75} 
+\index{AccountManager@{AccountManager}!calculateBalance@{calculateBalance}}
+\index{calculateBalance@{calculateBalance}!AccountManager@{AccountManager}}
+\doxysubsubsection{\texorpdfstring{calculateBalance()}{calculateBalance()}}
+{\footnotesize\ttfamily double Account\+Manager\+::calculate\+Balance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_account_manager_a46843a25add23ddec83cb2be551c2381}\label{class_account_manager_a46843a25add23ddec83cb2be551c2381} 
+\index{AccountManager@{AccountManager}!calculateProfit@{calculateProfit}}
+\index{calculateProfit@{calculateProfit}!AccountManager@{AccountManager}}
+\doxysubsubsection{\texorpdfstring{calculateProfit()}{calculateProfit()}}
+{\footnotesize\ttfamily double Account\+Manager\+::calculate\+Profit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_account_manager_a5fb315da6a546f70025f2ade362c26a9}\label{class_account_manager_a5fb315da6a546f70025f2ade362c26a9} 
+\index{AccountManager@{AccountManager}!findAccount@{findAccount}}
+\index{findAccount@{findAccount}!AccountManager@{AccountManager}}
+\doxysubsubsection{\texorpdfstring{findAccount()}{findAccount()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bank_account}{Bank\+Account}} \texorpdfstring{$\ast$}{*} Account\+Manager\+::find\+Account (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{account\+Number }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_account_manager_ae56d0238ac406ab70d14bc68dcaf0638}\label{class_account_manager_ae56d0238ac406ab70d14bc68dcaf0638} 
+\index{AccountManager@{AccountManager}!findByOwner@{findByOwner}}
+\index{findByOwner@{findByOwner}!AccountManager@{AccountManager}}
+\doxysubsubsection{\texorpdfstring{findByOwner()}{findByOwner()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_bank_account}{Bank\+Account}} \texorpdfstring{$\ast$}{*} $>$ Account\+Manager\+::find\+By\+Owner (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id\+Owner }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_account_manager_abc682645cd4f4ab79f235b289fee82b8}\label{class_account_manager_abc682645cd4f4ab79f235b289fee82b8} 
+\index{AccountManager@{AccountManager}!readAccounts@{readAccounts}}
+\index{readAccounts@{readAccounts}!AccountManager@{AccountManager}}
+\doxysubsubsection{\texorpdfstring{readAccounts()}{readAccounts()}}
+{\footnotesize\ttfamily void Account\+Manager\+::read\+Accounts (\begin{DoxyParamCaption}\item[{const std\+::string}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+\Hypertarget{class_account_manager_a9becb2225228555b6bfb6cea2d5c4e15}\label{class_account_manager_a9becb2225228555b6bfb6cea2d5c4e15} 
+\index{AccountManager@{AccountManager}!readTransactions@{readTransactions}}
+\index{readTransactions@{readTransactions}!AccountManager@{AccountManager}}
+\doxysubsubsection{\texorpdfstring{readTransactions()}{readTransactions()}}
+{\footnotesize\ttfamily void Account\+Manager\+::read\+Transactions (\begin{DoxyParamCaption}\item[{const std\+::string}]{file\+\_\+name,  }\item[{\mbox{\hyperlink{class_bank_account}{Bank\+Account}} \texorpdfstring{$\ast$}{*}}]{account }\end{DoxyParamCaption})}
+
+\Hypertarget{class_account_manager_a6c9fe111d3db0b3ba3fa86179e1fa683}\label{class_account_manager_a6c9fe111d3db0b3ba3fa86179e1fa683} 
+\index{AccountManager@{AccountManager}!removeAccount@{removeAccount}}
+\index{removeAccount@{removeAccount}!AccountManager@{AccountManager}}
+\doxysubsubsection{\texorpdfstring{removeAccount()}{removeAccount()}}
+{\footnotesize\ttfamily bool Account\+Manager\+::remove\+Account (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bank_account}{Bank\+Account}} \texorpdfstring{$\ast$}{*}}]{account }\end{DoxyParamCaption})}
+
+\Hypertarget{class_account_manager_a2c2fc8fa5e5d4b05f88fca92a4e66962}\label{class_account_manager_a2c2fc8fa5e5d4b05f88fca92a4e66962} 
+\index{AccountManager@{AccountManager}!sendTransaction@{sendTransaction}}
+\index{sendTransaction@{sendTransaction}!AccountManager@{AccountManager}}
+\doxysubsubsection{\texorpdfstring{sendTransaction()}{sendTransaction()}}
+{\footnotesize\ttfamily bool Account\+Manager\+::send\+Transaction (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{account\+Number,  }\item[{const std\+::string \&}]{reciver,  }\item[{const std\+::string \&}]{sender\+Acc\+Number,  }\item[{double}]{amount,  }\item[{const std\+::string \&}]{title }\end{DoxyParamCaption})}
+
+\Hypertarget{class_account_manager_acaaf1fd22cfe4ba7b77d3c5835e16aff}\label{class_account_manager_acaaf1fd22cfe4ba7b77d3c5835e16aff} 
+\index{AccountManager@{AccountManager}!takeMoney@{takeMoney}}
+\index{takeMoney@{takeMoney}!AccountManager@{AccountManager}}
+\doxysubsubsection{\texorpdfstring{takeMoney()}{takeMoney()}}
+{\footnotesize\ttfamily void Account\+Manager\+::take\+Money (\begin{DoxyParamCaption}\item[{double}]{amount,  }\item[{\mbox{\hyperlink{class_bank_account}{Bank\+Account}} \texorpdfstring{$\ast$}{*}}]{account }\end{DoxyParamCaption})}
+
+\Hypertarget{class_account_manager_a92d7743df2b626e4dac471a449c0770f}\label{class_account_manager_a92d7743df2b626e4dac471a449c0770f} 
+\index{AccountManager@{AccountManager}!writeAccounts@{writeAccounts}}
+\index{writeAccounts@{writeAccounts}!AccountManager@{AccountManager}}
+\doxysubsubsection{\texorpdfstring{writeAccounts()}{writeAccounts()}}
+{\footnotesize\ttfamily void Account\+Manager\+::write\+Accounts (\begin{DoxyParamCaption}\item[{const std\+::string}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+\Hypertarget{class_account_manager_a4a23637b44dcf2ad74953b40d12995ba}\label{class_account_manager_a4a23637b44dcf2ad74953b40d12995ba} 
+\index{AccountManager@{AccountManager}!writeTransactions@{writeTransactions}}
+\index{writeTransactions@{writeTransactions}!AccountManager@{AccountManager}}
+\doxysubsubsection{\texorpdfstring{writeTransactions()}{writeTransactions()}}
+{\footnotesize\ttfamily void Account\+Manager\+::write\+Transactions (\begin{DoxyParamCaption}\item[{const std\+::string}]{file\+\_\+name,  }\item[{\mbox{\hyperlink{class_bank_account}{Bank\+Account}} \texorpdfstring{$\ast$}{*}}]{account }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{accountmanager_8h}{accountmanager.\+h}}\item 
+\mbox{\hyperlink{accountmanager_8cpp}{accountmanager.\+cpp}}\end{DoxyCompactItemize}
